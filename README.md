@@ -13,7 +13,6 @@ A comprehensive motor control system built on ESP32 with WiFi Access Point mode 
 - **Real-time Status**: Live motor status, system uptime, and schedule monitoring
 - **Persistent Storage**: Settings and schedules saved to flash memory using NVS
 - **History Tracking**: Maintains history of motor operations and schedule executions
-- **Time Synchronization**: SNTP time synchronization with timezone support (GMT+5:30 Sri Lanka)
 - **Device Configuration**: Customizable device name and location settings
 
 ## Hardware Requirements
