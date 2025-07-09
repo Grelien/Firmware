@@ -1,0 +1,290 @@
+\hypertarget{group__HTTP__Handlers}{}\doxysection{HTTP Request Handlers}
+\label{group__HTTP__Handlers}\index{HTTP Request Handlers@{HTTP Request Handlers}}
+
+
+Individual handlers for different web interface pages and APIs.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_gadd29c8e887c995e7abc859e3cdde3e22}{root\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle requests to the root page (/) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga87b689240791fd6b7d2aecbb07eb9119}{motor\+\_\+on\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle motor ON requests (/motor/on) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga97f6255787070f48bf0dccda9970234f}{motor\+\_\+off\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle motor OFF requests (/motor/off) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_gabf5de309a34fbaa6611fe1c6f4cd9abc}{status\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle status API requests (/status) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga4c6cf2d305f657bf93b3be4c0f88912c}{time\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle time display requests (/time) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_gac48af00fc792e81230c8452487320728}{schedules\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle schedule management page requests (/schedules) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_gad57382b919a958c5c7c28755a63e4830}{add\+\_\+schedule\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle add schedule requests (/add\+\_\+schedule) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga37e05cf3eef20e8baeeea1067f21e0d4}{delete\+\_\+schedule\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle delete schedule requests (/delete\+\_\+schedule) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga567816ec4bcd20cd5e26ffa406f96524}{settings\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle settings page requests (/settings) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga9c299ede5b6ea13093c2cd7220ca20e1}{save\+\_\+settings\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle save settings requests (/save\+\_\+settings) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga4c1c69a929a17a11b96d47f320c8e6d8}{manual\+\_\+time\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle manual time setting requests (/manual\+\_\+time) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga2a2f052ad2fbe978da88f43760dd346d}{logo\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle logo image requests (/logo.png) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Individual handlers for different web interface pages and APIs. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__HTTP__Handlers_gad57382b919a958c5c7c28755a63e4830}\label{group__HTTP__Handlers_gad57382b919a958c5c7c28755a63e4830}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!add\_schedule\_handler@{add\_schedule\_handler}}
+\index{add\_schedule\_handler@{add\_schedule\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{add\_schedule\_handler()}{add\_schedule\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t add\+\_\+schedule\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle add schedule requests (/add\+\_\+schedule) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle containing schedule data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__HTTP__Handlers_ga37e05cf3eef20e8baeeea1067f21e0d4}\label{group__HTTP__Handlers_ga37e05cf3eef20e8baeeea1067f21e0d4}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!delete\_schedule\_handler@{delete\_schedule\_handler}}
+\index{delete\_schedule\_handler@{delete\_schedule\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{delete\_schedule\_handler()}{delete\_schedule\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t delete\+\_\+schedule\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle delete schedule requests (/delete\+\_\+schedule) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle containing schedule index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__HTTP__Handlers_ga2a2f052ad2fbe978da88f43760dd346d}\label{group__HTTP__Handlers_ga2a2f052ad2fbe978da88f43760dd346d}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!logo\_handler@{logo\_handler}}
+\index{logo\_handler@{logo\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{logo\_handler()}{logo\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t logo\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle logo image requests (/logo.png) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__HTTP__Handlers_ga4c1c69a929a17a11b96d47f320c8e6d8}\label{group__HTTP__Handlers_ga4c1c69a929a17a11b96d47f320c8e6d8}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!manual\_time\_handler@{manual\_time\_handler}}
+\index{manual\_time\_handler@{manual\_time\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{manual\_time\_handler()}{manual\_time\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t manual\+\_\+time\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle manual time setting requests (/manual\+\_\+time) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle containing time data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__HTTP__Handlers_ga97f6255787070f48bf0dccda9970234f}\label{group__HTTP__Handlers_ga97f6255787070f48bf0dccda9970234f}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!motor\_off\_handler@{motor\_off\_handler}}
+\index{motor\_off\_handler@{motor\_off\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{motor\_off\_handler()}{motor\_off\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t motor\+\_\+off\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle motor OFF requests (/motor/off) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__HTTP__Handlers_ga87b689240791fd6b7d2aecbb07eb9119}\label{group__HTTP__Handlers_ga87b689240791fd6b7d2aecbb07eb9119}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!motor\_on\_handler@{motor\_on\_handler}}
+\index{motor\_on\_handler@{motor\_on\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{motor\_on\_handler()}{motor\_on\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t motor\+\_\+on\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle motor ON requests (/motor/on) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__HTTP__Handlers_gadd29c8e887c995e7abc859e3cdde3e22}\label{group__HTTP__Handlers_gadd29c8e887c995e7abc859e3cdde3e22}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!root\_handler@{root\_handler}}
+\index{root\_handler@{root\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{root\_handler()}{root\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t root\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle requests to the root page (/) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success
+\end{DoxyReturn}
+Handle requests to the root page (/)
+
+Serves the primary web interface dashboard with motor status, device information, upcoming schedules, and irrigation history. Dynamically generates HTML with current system state and provides interactive motor controls.
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success, ESP\+\_\+\+FAIL on error
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Allocates up to 16KB for HTML generation 
+
+Automatically refreshes every 30 seconds via Java\+Script 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__HTTP__Handlers_ga9c299ede5b6ea13093c2cd7220ca20e1}\label{group__HTTP__Handlers_ga9c299ede5b6ea13093c2cd7220ca20e1}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!save\_settings\_handler@{save\_settings\_handler}}
+\index{save\_settings\_handler@{save\_settings\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{save\_settings\_handler()}{save\_settings\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t save\+\_\+settings\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle save settings requests (/save\+\_\+settings) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle containing new settings \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__HTTP__Handlers_gac48af00fc792e81230c8452487320728}\label{group__HTTP__Handlers_gac48af00fc792e81230c8452487320728}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!schedules\_handler@{schedules\_handler}}
+\index{schedules\_handler@{schedules\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{schedules\_handler()}{schedules\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t schedules\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle schedule management page requests (/schedules) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__HTTP__Handlers_ga567816ec4bcd20cd5e26ffa406f96524}\label{group__HTTP__Handlers_ga567816ec4bcd20cd5e26ffa406f96524}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!settings\_handler@{settings\_handler}}
+\index{settings\_handler@{settings\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{settings\_handler()}{settings\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t settings\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle settings page requests (/settings) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__HTTP__Handlers_gabf5de309a34fbaa6611fe1c6f4cd9abc}\label{group__HTTP__Handlers_gabf5de309a34fbaa6611fe1c6f4cd9abc}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!status\_handler@{status\_handler}}
+\index{status\_handler@{status\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{status\_handler()}{status\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t status\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle status API requests (/status) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success
+\end{DoxyReturn}
+Handle status API requests (/status)
+
+Returns JSON-\/formatted system status information including motor state, device configuration, current time, schedule count, and system uptime. Used by web interface for status updates and monitoring.
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success, ESP\+\_\+\+FAIL on memory allocation failure
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+Response Content-\/\+Type\+: application/json 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__HTTP__Handlers_ga4c6cf2d305f657bf93b3be4c0f88912c}\label{group__HTTP__Handlers_ga4c6cf2d305f657bf93b3be4c0f88912c}} 
+\index{HTTP Request Handlers@{HTTP Request Handlers}!time\_handler@{time\_handler}}
+\index{time\_handler@{time\_handler}!HTTP Request Handlers@{HTTP Request Handlers}}
+\doxysubsubsection{\texorpdfstring{time\_handler()}{time\_handler()}}
+{\footnotesize\ttfamily esp\+\_\+err\+\_\+t time\+\_\+handler (\begin{DoxyParamCaption}\item[{httpd\+\_\+req\+\_\+t $\ast$}]{req }\end{DoxyParamCaption})}
+
+
+
+Handle time display requests (/time) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & HTTP request handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ESP\+\_\+\+OK on success 
+\end{DoxyReturn}

@@ -1,0 +1,256 @@
+$\vert$ Supported Targets $\vert$ ESP32 $\vert$ ESP32-\/\+C2 $\vert$ ESP32-\/\+C3 $\vert$ ESP32-\/\+C5 $\vert$ ESP32-\/\+C6 $\vert$ ESP32-\/\+C61 $\vert$ ESP32-\/\+H2 $\vert$ ESP32-\/\+H21 $\vert$ ESP32-\/\+H4 $\vert$ ESP32-\/\+P4 $\vert$ ESP32-\/\+S2 $\vert$ ESP32-\/\+S3 $\vert$ $\vert$ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- $\vert$ -\/-\/--- $\vert$ -\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/--- $\vert$ -\/-\/-\/-\/-\/--- $\vert$\hypertarget{md_README_autotoc_md0}{}\doxysection{ESP32 Motor Controller with Wi\+Fi Web Interface}\label{md_README_autotoc_md0}
+A comprehensive motor control system built on ESP32 with Wi\+Fi Access Point mode and web-\/based interface. The system allows remote control of a motor with scheduling capabilities, real-\/time monitoring, and persistent storage.\hypertarget{md_README_autotoc_md1}{}\doxysubsection{Features}\label{md_README_autotoc_md1}
+
+\begin{DoxyItemize}
+\item {\bfseries{Wi\+Fi Access Point Mode}}\+: Creates its own Wi\+Fi network for direct connection
+\item {\bfseries{Web Interface}}\+: Modern, responsive web UI for motor control and configuration
+\item {\bfseries{Motor Scheduling}}\+: Add, edit, and delete motor schedules with time-\/based automation
+\item {\bfseries{Real-\/time Status}}\+: Live motor status, system uptime, and schedule monitoring
+\item {\bfseries{Persistent Storage}}\+: Settings and schedules saved to flash memory using NVS
+\item {\bfseries{History Tracking}}\+: Maintains history of motor operations and schedule executions
+\item {\bfseries{Time Synchronization}}\+: SNTP time synchronization with timezone support (GMT+5\+:30 Sri Lanka)
+\item {\bfseries{Device Configuration}}\+: Customizable device name and location settings
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md2}{}\doxysubsection{Hardware Requirements}\label{md_README_autotoc_md2}
+
+\begin{DoxyItemize}
+\item ESP32 development board (ESP32-\/\+S3 recommended)
+\item Motor or relay connected to GPIO 2
+\item Power supply suitable for your motor
+\item Wi\+Fi capability (built into ESP32)
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md3}{}\doxysubsection{Pin Configuration}\label{md_README_autotoc_md3}
+
+\begin{DoxyItemize}
+\item {\bfseries{GPIO 2}}\+: Motor control output (LOW = ON, HIGH = OFF)
+\item The pin floats when motor is OFF for safety
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md4}{}\doxysubsection{Wi\+Fi Configuration}\label{md_README_autotoc_md4}
+
+\begin{DoxyItemize}
+\item {\bfseries{SSID}}\+: Motor Controller
+\item {\bfseries{Password}}\+: 12345679
+\item {\bfseries{IP Address}}\+: 192.\+168.\+4.\+1 (default AP mode)
+\item {\bfseries{Max Connections}}\+: 4 simultaneous clients
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md5}{}\doxysubsection{Web Interface Features}\label{md_README_autotoc_md5}
+\hypertarget{md_README_autotoc_md6}{}\doxysubsubsection{Main Dashboard}\label{md_README_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Real-\/time motor status display
+\item System information (uptime, device name, location)
+\item Quick motor ON/\+OFF controls
+\item Current schedules overview
+\item Operation history
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md7}{}\doxysubsubsection{Motor Control}\label{md_README_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Manual motor control buttons
+\item Visual status indicators
+\item Safety features with floating pins when OFF
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md8}{}\doxysubsubsection{Schedule Management}\label{md_README_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Add new schedules with start/end times
+\item Enable/disable schedules
+\item Daily repeat functionality
+\item Edit and delete existing schedules
+\item Visual schedule list with status indicators
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md9}{}\doxysubsubsection{Settings}\label{md_README_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Device name configuration
+\item Location settings
+\item Time zone configuration
+\item Manual time setting
+\item Persistent storage management
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md10}{}\doxysubsection{Project Structure}\label{md_README_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{├── CMakeLists.txt}
+\DoxyCodeLine{├── README.md}
+\DoxyCodeLine{├── partitions.csv}
+\DoxyCodeLine{├── sdkconfig}
+\DoxyCodeLine{├── logo.png                   Logo image for web interface}
+\DoxyCodeLine{├── main/}
+\DoxyCodeLine{│   ├── CMakeLists.txt}
+\DoxyCodeLine{│   ├── motor\_controller.c     Main application entry point}
+\DoxyCodeLine{│   ├── global.h              Global definitions and declarations}
+\DoxyCodeLine{│   ├── types.h               Type definitions and constants}
+\DoxyCodeLine{│   ├── motor\_control.c       Motor control functions}
+\DoxyCodeLine{│   ├── motor\_control.h}
+\DoxyCodeLine{│   ├── webserver.c           HTTP server and web interface}
+\DoxyCodeLine{│   ├── webserver.h}
+\DoxyCodeLine{│   ├── wifi\_ap.c             WiFi Access Point configuration}
+\DoxyCodeLine{│   ├── wifi\_ap.h}
+\DoxyCodeLine{│   ├── schedule.c            Schedule management logic}
+\DoxyCodeLine{│   ├── schedule.h}
+\DoxyCodeLine{│   ├── storage.c             NVS storage functions}
+\DoxyCodeLine{│   ├── storage.h}
+\DoxyCodeLine{│   ├── time\_util.c           Time utilities and formatting}
+\DoxyCodeLine{│   └── time\_util.h}
+\DoxyCodeLine{└── build/                    Build output directory}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md11}{}\doxysubsection{Configuration Options}\label{md_README_autotoc_md11}
+\hypertarget{md_README_autotoc_md12}{}\doxysubsubsection{Motor Settings}\label{md_README_autotoc_md12}
+
+\begin{DoxyItemize}
+\item Pin assignment (default\+: GPIO 2)
+\item Active level configuration (LOW = ON)
+\item Safety floating when OFF
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md13}{}\doxysubsubsection{Time Settings}\label{md_README_autotoc_md13}
+
+\begin{DoxyItemize}
+\item Timezone\+: GMT+5\+:30 (Sri Lanka)
+\item SNTP server\+: pool.\+ntp.\+org
+\item Automatic time synchronization
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md14}{}\doxysubsubsection{Storage Settings}\label{md_README_autotoc_md14}
+
+\begin{DoxyItemize}
+\item Maximum schedules\+: 10
+\item History entries\+: 30
+\item Device name max length\+: 32 characters
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md15}{}\doxysubsection{Getting Started}\label{md_README_autotoc_md15}
+\hypertarget{md_README_autotoc_md16}{}\doxysubsubsection{1. Hardware Setup}\label{md_README_autotoc_md16}
+
+\begin{DoxyEnumerate}
+\item Connect your motor or relay to GPIO 2 of the ESP32
+\item Ensure proper power supply for your motor
+\item Connect ESP32 to development computer
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md17}{}\doxysubsubsection{2. Build and Flash}\label{md_README_autotoc_md17}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# Set up ESP-\/IDF environment}
+\DoxyCodeLine{. \$HOME/esp/esp-\/idf/export.sh}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Navigate to project directory}
+\DoxyCodeLine{cd /path/to/motor\_controller}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Configure project (optional)}
+\DoxyCodeLine{idf.py menuconfig}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Build the project}
+\DoxyCodeLine{idf.py build}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Flash to ESP32 (replace PORT with your serial port)}
+\DoxyCodeLine{idf.py -\/p PORT flash}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# Monitor serial output}
+\DoxyCodeLine{idf.py -\/p PORT monitor}
+
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md18}{}\doxysubsubsection{3. Connect to Wi\+Fi}\label{md_README_autotoc_md18}
+
+\begin{DoxyEnumerate}
+\item Power on the ESP32
+\item Look for Wi\+Fi network \char`\"{}\+Motor Controller\char`\"{}
+\item Connect with password \char`\"{}12345679\char`\"{}
+\item Open web browser and go to \href{http://192.168.4.1}{\texttt{ http\+://192.\+168.\+4.\+1}}
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md19}{}\doxysubsubsection{4. Configure Device}\label{md_README_autotoc_md19}
+
+\begin{DoxyEnumerate}
+\item Go to Settings page
+\item Set device name and location
+\item Configure schedules as needed
+\item Settings are automatically saved to flash
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md20}{}\doxysubsection{Web Interface Usage}\label{md_README_autotoc_md20}
+\hypertarget{md_README_autotoc_md21}{}\doxysubsubsection{Accessing the Interface}\label{md_README_autotoc_md21}
+
+\begin{DoxyItemize}
+\item Connect to \char`\"{}\+Motor Controller\char`\"{} Wi\+Fi network
+\item Navigate to \href{http://192.168.4.1}{\texttt{ http\+://192.\+168.\+4.\+1}} in web browser
+\item Interface is responsive and works on mobile devices
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md22}{}\doxysubsubsection{Motor Control}\label{md_README_autotoc_md22}
+
+\begin{DoxyItemize}
+\item Use ON/\+OFF buttons for manual control
+\item Status is updated in real-\/time
+\item Motor blinks 3 times on startup for indication
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md23}{}\doxysubsubsection{Schedule Management}\label{md_README_autotoc_md23}
+
+\begin{DoxyEnumerate}
+\item Click \char`\"{}\+Add Schedule\char`\"{}
+\item Set start and end times
+\item Choose daily repeat option
+\item Enable/disable as needed
+\item Schedules run automatically
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md24}{}\doxysubsubsection{History Viewing}\label{md_README_autotoc_md24}
+
+\begin{DoxyItemize}
+\item View recent motor operations
+\item See which schedules triggered
+\item Monitor system activity
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md25}{}\doxysubsection{API Endpoints}\label{md_README_autotoc_md25}
+The system provides REST API endpoints\+:
+
+
+\begin{DoxyItemize}
+\item {\ttfamily GET /} -\/ Main dashboard
+\item {\ttfamily GET /status} -\/ JSON status information
+\item {\ttfamily POST /motor/on} -\/ Turn motor ON
+\item {\ttfamily POST /motor/off} -\/ Turn motor OFF
+\item {\ttfamily GET /schedules} -\/ Schedule management page
+\item {\ttfamily POST /add\+\_\+schedule} -\/ Add new schedule
+\item {\ttfamily POST /delete\+\_\+schedule} -\/ Delete schedule
+\item {\ttfamily GET /settings} -\/ Settings page
+\item {\ttfamily POST /save\+\_\+settings} -\/ Save settings
+\item {\ttfamily POST /manual\+\_\+time} -\/ Set manual time
+\item {\ttfamily GET /logo.png} -\/ Device logo
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md26}{}\doxysubsection{Troubleshooting}\label{md_README_autotoc_md26}
+\hypertarget{md_README_autotoc_md27}{}\doxysubsubsection{Build Issues}\label{md_README_autotoc_md27}
+
+\begin{DoxyItemize}
+\item Ensure ESP-\/\+IDF is properly installed and sourced
+\item Check that all required components are available
+\item Clean build\+: {\ttfamily idf.\+py clean \&\& idf.\+py build}
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md28}{}\doxysubsubsection{Wi\+Fi Connection Issues}\label{md_README_autotoc_md28}
+
+\begin{DoxyItemize}
+\item Verify Wi\+Fi credentials
+\item Check ESP32 is in AP mode
+\item Reset device if network not appearing
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md29}{}\doxysubsubsection{Motor Not Responding}\label{md_README_autotoc_md29}
+
+\begin{DoxyItemize}
+\item Check GPIO 2 wiring
+\item Verify motor power supply
+\item Check web interface for error messages
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md30}{}\doxysubsubsection{Time Synchronization Issues}\label{md_README_autotoc_md30}
+
+\begin{DoxyItemize}
+\item Ensure internet connectivity through AP
+\item Check SNTP server configuration
+\item Manually set time if automatic sync fails
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md31}{}\doxysubsection{Development}\label{md_README_autotoc_md31}
+\hypertarget{md_README_autotoc_md32}{}\doxysubsubsection{Adding New Features}\label{md_README_autotoc_md32}
+
+\begin{DoxyEnumerate}
+\item Add function declarations to appropriate header files
+\item Implement functions in corresponding .c files
+\item Update web interface if needed
+\item Test thoroughly before deployment
+\end{DoxyEnumerate}\hypertarget{md_README_autotoc_md33}{}\doxysubsubsection{Code Structure}\label{md_README_autotoc_md33}
+
+\begin{DoxyItemize}
+\item {\ttfamily \mbox{\hyperlink{global_8h}{global.\+h}}} -\/ Contains all global variable declarations
+\item {\ttfamily \mbox{\hyperlink{types_8h}{types.\+h}}} -\/ Type definitions shared across modules
+\item Each module has separate .h/.c files
+\item Web interface uses embedded HTML/\+CSS/\+Java\+Script
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md34}{}\doxysubsubsection{Memory Management}\label{md_README_autotoc_md34}
+
+\begin{DoxyItemize}
+\item Uses NVS for persistent storage
+\item Manages flash wear leveling automatically
+\item Efficient memory usage for embedded system
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md35}{}\doxysubsection{Technical Support}\label{md_README_autotoc_md35}
+For technical support\+:
+\begin{DoxyItemize}
+\item Check ESP-\/\+IDF documentation
+\item Review ESP32 GPIO specifications
+\item Verify motor control circuit design
+\item Test with minimal hardware setup first
+\end{DoxyItemize}\hypertarget{md_README_autotoc_md36}{}\doxysubsection{License}\label{md_README_autotoc_md36}
+This project is open source. Modify and distribute as needed for your applications.\hypertarget{md_README_autotoc_md37}{}\doxysubsection{Version History}\label{md_README_autotoc_md37}
+
+\begin{DoxyItemize}
+\item v1.\+2 -\/ Current version with web interface and scheduling
+\item v1.\+1 -\/ Added persistent storage and time sync
+\item v1.\+0 -\/ Basic motor control functionality 
+\end{DoxyItemize}

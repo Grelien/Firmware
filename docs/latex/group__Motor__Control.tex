@@ -1,0 +1,99 @@
+\hypertarget{group__Motor__Control}{}\doxysection{Motor Control Functions}
+\label{group__Motor__Control}\index{Motor Control Functions@{Motor Control Functions}}
+
+
+Functions for controlling the motor hardware.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__Motor__Control_gaaa8730f656c79c1877997d7f3af63027}{set\+\_\+pins\+\_\+to\+\_\+float}} (void)
+\begin{DoxyCompactList}\small\item\em Set motor control pins to floating state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Motor__Control_ga464415ba555c0bcab1f9b262bd8167f0}{motor\+\_\+on}} (void)
+\begin{DoxyCompactList}\small\item\em Turn the motor ON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Motor__Control_ga754e0993eea9785f729c9cfe486fba02}{motor\+\_\+off}} (void)
+\begin{DoxyCompactList}\small\item\em Turn the motor OFF. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__Motor__Control_gac25cc836ee7b0063b02a1da3f74bf537}{motor\+\_\+state}}
+\begin{DoxyCompactList}\small\item\em Current motor state variable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for controlling the motor hardware. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__Motor__Control_ga754e0993eea9785f729c9cfe486fba02}\label{group__Motor__Control_ga754e0993eea9785f729c9cfe486fba02}} 
+\index{Motor Control Functions@{Motor Control Functions}!motor\_off@{motor\_off}}
+\index{motor\_off@{motor\_off}!Motor Control Functions@{Motor Control Functions}}
+\doxysubsubsection{\texorpdfstring{motor\_off()}{motor\_off()}}
+{\footnotesize\ttfamily void motor\+\_\+off (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turn the motor OFF. 
+
+Sets the motor control pin to floating state and updates the global motor\+\_\+state variable. Logs the action for debugging purposes.
+
+Turn the motor OFF.
+
+Deactivates the motor by\+:
+\begin{DoxyEnumerate}
+\item Setting pins to floating state for safety
+\item Updating global motor state
+\item Logging the action
+\end{DoxyEnumerate}
+
+Uses floating pins instead of HIGH signal for additional safety. \mbox{\Hypertarget{group__Motor__Control_ga464415ba555c0bcab1f9b262bd8167f0}\label{group__Motor__Control_ga464415ba555c0bcab1f9b262bd8167f0}} 
+\index{Motor Control Functions@{Motor Control Functions}!motor\_on@{motor\_on}}
+\index{motor\_on@{motor\_on}!Motor Control Functions@{Motor Control Functions}}
+\doxysubsubsection{\texorpdfstring{motor\_on()}{motor\_on()}}
+{\footnotesize\ttfamily void motor\+\_\+on (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Turn the motor ON. 
+
+Configures the motor control pin as output and sets it LOW to activate the motor. Updates the global motor\+\_\+state variable and logs the action.
+
+Activates the motor by\+:
+\begin{DoxyEnumerate}
+\item Setting the control pin as output
+\item Setting pin LOW (active low control)
+\item Updating global motor state
+\item Logging the action 
+\end{DoxyEnumerate}\mbox{\Hypertarget{group__Motor__Control_gaaa8730f656c79c1877997d7f3af63027}\label{group__Motor__Control_gaaa8730f656c79c1877997d7f3af63027}} 
+\index{Motor Control Functions@{Motor Control Functions}!set\_pins\_to\_float@{set\_pins\_to\_float}}
+\index{set\_pins\_to\_float@{set\_pins\_to\_float}!Motor Control Functions@{Motor Control Functions}}
+\doxysubsubsection{\texorpdfstring{set\_pins\_to\_float()}{set\_pins\_to\_float()}}
+{\footnotesize\ttfamily void set\+\_\+pins\+\_\+to\+\_\+float (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Set motor control pins to floating state. 
+
+This function configures the motor control pin as input with floating state, effectively disconnecting the motor. This is used for safety when the motor should be OFF.
+
+Set motor control pins to floating state.
+
+Configures the motor control pin as input with floating state, effectively disconnecting the motor control signal. This ensures the motor is safely OFF and not consuming power. 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{group__Motor__Control_gac25cc836ee7b0063b02a1da3f74bf537}\label{group__Motor__Control_gac25cc836ee7b0063b02a1da3f74bf537}} 
+\index{Motor Control Functions@{Motor Control Functions}!motor\_state@{motor\_state}}
+\index{motor\_state@{motor\_state}!Motor Control Functions@{Motor Control Functions}}
+\doxysubsubsection{\texorpdfstring{motor\_state}{motor\_state}}
+{\footnotesize\ttfamily bool motor\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Current motor state variable. 
+
+\begin{DoxyNote}{Note}
+Actual declaration is in \mbox{\hyperlink{global_8h}{global.\+h}}
+\end{DoxyNote}
+Current motor state 

@@ -1,0 +1,32 @@
+\hypertarget{schedule_8c}{}\doxysection{main/schedule.c File Reference}
+\label{schedule_8c}\index{main/schedule.c@{main/schedule.c}}
+
+
+Schedule Management Implementation.  
+
+
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}schedule.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}motor\+\_\+control.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}storage.\+h\char`\"{}}\newline
+Include dependency graph for schedule.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__Schedule__Management_ga6f6409385677dd94d04e999017ee71b0}{add\+\_\+to\+\_\+history}} (const char $\ast$schedule\+\_\+name, const char $\ast$action)
+\begin{DoxyCompactList}\small\item\em Add a schedule event to history. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Schedule__Management_gaccfbb70299f2c744b57e76a32875bfe9}{check\+\_\+schedules}} (void)
+\begin{DoxyCompactList}\small\item\em Check and execute scheduled motor operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Schedule Management Implementation. 
+
+\begin{DoxyAuthor}{Author}
+Motor Controller Project 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024
+\end{DoxyDate}
+This module implements the schedule management system for motor control. It handles schedule execution, history tracking, and schedule validation. The system supports up to MAX\+\_\+\+SCHEDULES concurrent schedules with daily repeat functionality and maintains a history of schedule executions. 

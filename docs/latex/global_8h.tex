@@ -1,0 +1,107 @@
+\hypertarget{global_8h}{}\doxysection{main/global.h File Reference}
+\label{global_8h}\index{main/global.h@{main/global.h}}
+
+
+Global definitions, constants, and variable declarations for Motor Controller.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}freertos/\+Free\+RTOS.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}freertos/task.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}freertos/event\+\_\+groups.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+system.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+wifi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+event.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+netif.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+http\+\_\+server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nvs\+\_\+flash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nvs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driver/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+sleep.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/err.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}lwip/sys.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+sntp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+Include dependency graph for global.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{global_8h_a3acffbd305ee72dcd4593c0d8af64a4f}{MIN}}(a,  b)~((a) $<$ (b) ? (a) \+: (b))
+\begin{DoxyCompactList}\small\item\em Utility macro to find minimum of two values. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__WiFi__Config_ga56ee34255f5306176ee8fea2137397d4}{AP\+\_\+\+SSID}}~\char`\"{}Motor Controller\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__WiFi__Config_ga9fee3cc704e47eccf1457818bdaa68a8}{AP\+\_\+\+PASSWORD}}~\char`\"{}12345679\char`\"{}
+\item 
+\#define \mbox{\hyperlink{group__WiFi__Config_gaeb5e44111f7b1409c0c52209ef57e17f}{AP\+\_\+\+MAX\+\_\+\+STA\+\_\+\+CONN}}~4
+\item 
+\#define \mbox{\hyperlink{group__GPIO__Config_ga8e1ee46448a9d6fd89208aa48e0b1e58}{MOTOR\+\_\+\+PIN}}~GPIO\+\_\+\+NUM\+\_\+2
+\item 
+\#define \mbox{\hyperlink{group__GPIO__Config_ga494c398dda48a1544c2bb9704f4fb0b9}{MOTOR\+\_\+\+PIN\+\_\+\+SEL}}~(1ULL $<$$<$ \mbox{\hyperlink{motor__control_8c_a8e1ee46448a9d6fd89208aa48e0b1e58}{MOTOR\+\_\+\+PIN}})
+\item 
+\#define \mbox{\hyperlink{group__Time__Config_gae1787d025c997f4fa85a125b9334b05d}{GMT\+\_\+\+OFFSET\+\_\+\+SEC}}~19800
+\item 
+\#define \mbox{\hyperlink{group__Time__Config_ga1273888078bf7e8651b4493ded125b8e}{DAYLIGHT\+\_\+\+OFFSET\+\_\+\+SEC}}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const uint8\+\_\+t logo\+\_\+data\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{group__Logo__Data_ga2264c5cf7e67eca12ebe01ce6d59b707}{asm}} (\char`\"{}\+\_\+binary\+\_\+logo\+\_\+png\+\_\+start\char`\"{})
+\item 
+const uint8\+\_\+t logo\+\_\+end\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{group__Logo__Data_ga117316a1fefce9da697bd52cc84c352b}{asm}} (\char`\"{}\+\_\+binary\+\_\+logo\+\_\+png\+\_\+end\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__Global__Variables_gac25cc836ee7b0063b02a1da3f74bf537}{motor\+\_\+state}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__Global__Variables_ga8ba03532cceb98f2700598e4b8ebab48}{schedule\+\_\+count}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__Global__Variables_gaaeeff701039c2f46b51e4f0d562b1e3d}{history\+\_\+count}}
+\item 
+char \mbox{\hyperlink{group__Global__Variables_ga379a6db0628febd9a7960103c5a1562b}{device\+\_\+name}} \mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]}
+\item 
+char \mbox{\hyperlink{group__Global__Variables_gac129e26f9f1f6146194084abb5376f57}{device\+\_\+location}} \mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]}
+\item 
+\mbox{\hyperlink{structschedule__t}{schedule\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga5ef1c562fc22c967963564629bf09a94}{schedules}} \mbox{[}\mbox{\hyperlink{group__Configuration_gac716cf158367d8f76483f00b0cd049ad}{MAX\+\_\+\+SCHEDULES}}\mbox{]}
+\item 
+\mbox{\hyperlink{structschedule__history__t}{schedule\+\_\+history\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga22ee64e19704e2ee3653245d85743d65}{schedule\+\_\+history}} \mbox{[}\mbox{\hyperlink{group__Configuration_gabf8d8994f09509f9e061f5bf82daf4cd}{MAX\+\_\+\+HISTORY}}\mbox{]}
+\item 
+\mbox{\hyperlink{structsaved__time__t}{saved\+\_\+time\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga5b22cc9d737a63bfbe005666ba7b4edc}{last\+\_\+known\+\_\+time}}
+\item 
+httpd\+\_\+handle\+\_\+t \mbox{\hyperlink{group__Global__Variables_ga021c2db71a5647e2e98217b3f9b5401e}{server}}
+\item 
+nvs\+\_\+handle\+\_\+t \mbox{\hyperlink{group__Global__Variables_gaaec1872a025597d6dd7ac7b252113ce5}{g\+\_\+nvs\+\_\+handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Global definitions, constants, and variable declarations for Motor Controller. 
+
+\begin{DoxyAuthor}{Author}
+Motor Controller Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{global_8h_a3acffbd305ee72dcd4593c0d8af64a4f}\label{global_8h_a3acffbd305ee72dcd4593c0d8af64a4f}} 
+\index{global.h@{global.h}!MIN@{MIN}}
+\index{MIN@{MIN}!global.h@{global.h}}
+\doxysubsubsection{\texorpdfstring{MIN}{MIN}}
+{\footnotesize\ttfamily \#define MIN(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b }\end{DoxyParamCaption})~((a) $<$ (b) ? (a) \+: (b))}
+
+
+
+Utility macro to find minimum of two values. 
+

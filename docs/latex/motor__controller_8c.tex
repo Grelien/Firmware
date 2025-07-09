@@ -1,0 +1,86 @@
+\hypertarget{motor__controller_8c}{}\doxysection{main/motor\+\_\+controller.c File Reference}
+\label{motor__controller_8c}\index{main/motor\_controller.c@{main/motor\_controller.c}}
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}schedule.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}storage.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}wifi\+\_\+ap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}webserver.\+h\char`\"{}}\newline
+Include dependency graph for motor\+\_\+controller.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{motor__controller_8c_a7216159f1debadffa50b4e71d35c50b8}{schedule\+\_\+check\+\_\+task}} (void $\ast$pv\+Parameters)
+\begin{DoxyCompactList}\small\item\em Background task for schedule checking and time management. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{motor__controller_8c_a630544a7f0a2cc40d8a7fefab7e2fe70}{app\+\_\+main}} (void)
+\begin{DoxyCompactList}\small\item\em Main application entry point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__Global__Variables_gac25cc836ee7b0063b02a1da3f74bf537}{motor\+\_\+state}} = false
+\begin{DoxyCompactList}\small\item\em Current motor state variable. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Global__Variables_ga8ba03532cceb98f2700598e4b8ebab48}{schedule\+\_\+count}} = 0
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__Global__Variables_gaaeeff701039c2f46b51e4f0d562b1e3d}{history\+\_\+count}} = 0
+\item 
+char \mbox{\hyperlink{group__Global__Variables_ga379a6db0628febd9a7960103c5a1562b}{device\+\_\+name}} \mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]} = \char`\"{}Motor Controller\char`\"{}
+\item 
+char \mbox{\hyperlink{group__Global__Variables_gac129e26f9f1f6146194084abb5376f57}{device\+\_\+location}} \mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]} = \char`\"{}Green House\char`\"{}
+\item 
+\mbox{\hyperlink{structschedule__t}{schedule\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga5ef1c562fc22c967963564629bf09a94}{schedules}} \mbox{[}\mbox{\hyperlink{group__Configuration_gac716cf158367d8f76483f00b0cd049ad}{MAX\+\_\+\+SCHEDULES}}\mbox{]}
+\item 
+\mbox{\hyperlink{structschedule__history__t}{schedule\+\_\+history\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga22ee64e19704e2ee3653245d85743d65}{schedule\+\_\+history}} \mbox{[}\mbox{\hyperlink{group__Configuration_gabf8d8994f09509f9e061f5bf82daf4cd}{MAX\+\_\+\+HISTORY}}\mbox{]}
+\item 
+\mbox{\hyperlink{structsaved__time__t}{saved\+\_\+time\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga5b22cc9d737a63bfbe005666ba7b4edc}{last\+\_\+known\+\_\+time}}
+\item 
+httpd\+\_\+handle\+\_\+t \mbox{\hyperlink{group__Global__Variables_ga021c2db71a5647e2e98217b3f9b5401e}{server}} = NULL
+\item 
+nvs\+\_\+handle\+\_\+t \mbox{\hyperlink{group__Global__Variables_gaaec1872a025597d6dd7ac7b252113ce5}{g\+\_\+nvs\+\_\+handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{motor__controller_8c_a630544a7f0a2cc40d8a7fefab7e2fe70}\label{motor__controller_8c_a630544a7f0a2cc40d8a7fefab7e2fe70}} 
+\index{motor\_controller.c@{motor\_controller.c}!app\_main@{app\_main}}
+\index{app\_main@{app\_main}!motor\_controller.c@{motor\_controller.c}}
+\doxysubsubsection{\texorpdfstring{app\_main()}{app\_main()}}
+{\footnotesize\ttfamily void app\+\_\+main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Main application entry point. 
+
+Initializes all system components in the following order\+:
+\begin{DoxyEnumerate}
+\item GPIO configuration for motor control
+\item Non-\/volatile storage (NVS)
+\item Load saved settings and time
+\item Wi\+Fi Access Point setup
+\item SNTP time synchronization
+\item Web server startup
+\item Motor indication sequence
+\item Background task creation
+\end{DoxyEnumerate}
+
+The system provides visual feedback through LED blinking during startup. \mbox{\Hypertarget{motor__controller_8c_a7216159f1debadffa50b4e71d35c50b8}\label{motor__controller_8c_a7216159f1debadffa50b4e71d35c50b8}} 
+\index{motor\_controller.c@{motor\_controller.c}!schedule\_check\_task@{schedule\_check\_task}}
+\index{schedule\_check\_task@{schedule\_check\_task}!motor\_controller.c@{motor\_controller.c}}
+\doxysubsubsection{\texorpdfstring{schedule\_check\_task()}{schedule\_check\_task()}}
+{\footnotesize\ttfamily void schedule\+\_\+check\+\_\+task (\begin{DoxyParamCaption}\item[{void $\ast$}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+
+
+Background task for schedule checking and time management. 
+
+This Free\+RTOS task runs continuously to\+:
+\begin{DoxyItemize}
+\item Check and execute schedules every 30 seconds
+\item Save current time to flash every 5 minutes
+\item Maintain system timing for automated operations
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em pv\+Parameters} & Task parameters (unused) \\
+\hline
+\end{DoxyParams}

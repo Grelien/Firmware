@@ -1,0 +1,51 @@
+\hypertarget{motor__control_8c}{}\doxysection{main/motor\+\_\+control.c File Reference}
+\label{motor__control_8c}\index{main/motor\_control.c@{main/motor\_control.c}}
+
+
+Motor control implementation with safety features.  
+
+
+{\ttfamily \#include \char`\"{}motor\+\_\+control.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}driver/gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+log.\+h\char`\"{}}\newline
+Include dependency graph for motor\+\_\+control.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{motor__control_8c_a8e1ee46448a9d6fd89208aa48e0b1e58}{MOTOR\+\_\+\+PIN}}~GPIO\+\_\+\+NUM\+\_\+2
+\begin{DoxyCompactList}\small\item\em Local definition of motor control pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__Motor__Control_gaaa8730f656c79c1877997d7f3af63027}{set\+\_\+pins\+\_\+to\+\_\+float}} (void)
+\begin{DoxyCompactList}\small\item\em Set motor control pins to floating state for safety. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Motor__Control_ga464415ba555c0bcab1f9b262bd8167f0}{motor\+\_\+on}} (void)
+\begin{DoxyCompactList}\small\item\em Turn the motor ON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Motor__Control_ga754e0993eea9785f729c9cfe486fba02}{motor\+\_\+off}} (void)
+\begin{DoxyCompactList}\small\item\em Turn the motor OFF safely. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Motor control implementation with safety features. 
+
+\begin{DoxyAuthor}{Author}
+Motor Controller Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{motor__control_8c_a8e1ee46448a9d6fd89208aa48e0b1e58}\label{motor__control_8c_a8e1ee46448a9d6fd89208aa48e0b1e58}} 
+\index{motor\_control.c@{motor\_control.c}!MOTOR\_PIN@{MOTOR\_PIN}}
+\index{MOTOR\_PIN@{MOTOR\_PIN}!motor\_control.c@{motor\_control.c}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_PIN}{MOTOR\_PIN}}
+{\footnotesize\ttfamily \#define MOTOR\+\_\+\+PIN~GPIO\+\_\+\+NUM\+\_\+2}
+
+
+
+Local definition of motor control pin. 
+

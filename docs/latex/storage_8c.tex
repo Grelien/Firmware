@@ -1,0 +1,45 @@
+\hypertarget{storage_8c}{}\doxysection{main/storage.c File Reference}
+\label{storage_8c}\index{main/storage.c@{main/storage.c}}
+
+
+Persistent Storage Implementation using NVS.  
+
+
+{\ttfamily \#include \char`\"{}global.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}storage.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}nvs\+\_\+flash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nvs.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}time.\+h\char`\"{}}\newline
+Include dependency graph for storage.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__Storage_ga973715a384f1e51b7b8993bdbed15a3b}{init\+\_\+nvs}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize NVS storage system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage_ga8e470dddd9c49dad31fe155e6eff9fbc}{load\+\_\+settings}} (void)
+\begin{DoxyCompactList}\small\item\em Load device settings and schedules from NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage_ga2ea83bdac732caa4f9cb7806d0d34d79}{save\+\_\+settings}} (void)
+\begin{DoxyCompactList}\small\item\em Save device settings and schedules to NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage_gafd45f9e5ac12f008aa62728519ed4bd6}{save\+\_\+history\+\_\+to\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Save schedule execution history to NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage_gaad68423f26904e60af5372e60d0df6f5}{load\+\_\+history\+\_\+from\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Load schedule execution history from NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage_gadfa5a5d4d22b0fd6e9eddfeb4ff74d9f}{save\+\_\+time\+\_\+to\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Save current system time to NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage_ga6d1ab41537e4ba04a6338bdd3374618f}{restore\+\_\+time\+\_\+from\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Restore system time from NVS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Persistent Storage Implementation using NVS. 
+
+\begin{DoxyAuthor}{Author}
+Motor Controller Project 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2024
+\end{DoxyDate}
+This module implements persistent storage functionality using ESP32\textquotesingle{}s NVS (Non-\/\+Volatile Storage) system. It handles storage and retrieval of device settings, schedules, history, and time information. All data is automatically saved to flash memory and persists across device reboots. 

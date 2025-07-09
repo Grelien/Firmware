@@ -1,0 +1,42 @@
+\hypertarget{storage_8h}{}\doxysection{main/storage.h File Reference}
+\label{storage_8h}\index{main/storage.h@{main/storage.h}}
+
+
+Non-\/volatile storage interface for persistent data management.  
+
+
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}time\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+Include dependency graph for storage.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__Storage__Management_ga973715a384f1e51b7b8993bdbed15a3b}{init\+\_\+nvs}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the Non-\/\+Volatile Storage (NVS) system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_ga8e470dddd9c49dad31fe155e6eff9fbc}{load\+\_\+settings}} (void)
+\begin{DoxyCompactList}\small\item\em Load device settings and schedules from NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_ga2ea83bdac732caa4f9cb7806d0d34d79}{save\+\_\+settings}} (void)
+\begin{DoxyCompactList}\small\item\em Save current device settings and schedules to NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_gafd45f9e5ac12f008aa62728519ed4bd6}{save\+\_\+history\+\_\+to\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Save schedule execution history to NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_gaad68423f26904e60af5372e60d0df6f5}{load\+\_\+history\+\_\+from\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Load schedule execution history from NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_gadfa5a5d4d22b0fd6e9eddfeb4ff74d9f}{save\+\_\+time\+\_\+to\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Save current system time to NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_ga6d1ab41537e4ba04a6338bdd3374618f}{restore\+\_\+time\+\_\+from\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Restore system time from NVS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Non-\/volatile storage interface for persistent data management. 
+
+\begin{DoxyAuthor}{Author}
+Motor Controller Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

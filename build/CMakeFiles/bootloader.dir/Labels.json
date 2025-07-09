@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/pc8/Desktop/version1.3.3/hello_world/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/home/pc8/Desktop/version1.3.3/hello_world/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/home/pc8/Desktop/version1.3.3/hello_world/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/home/pc8/Desktop/version1.3.3/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/home/pc8/Desktop/version1.3.3/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/home/pc8/Desktop/version1.3.3/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/home/pc8/Desktop/version1.3.3/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/home/pc8/Desktop/version1.3.3/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/pc8/Desktop/version1.3.3/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/home/pc8/Desktop/version1.3.3/hello_world/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

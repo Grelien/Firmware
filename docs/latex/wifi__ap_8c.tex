@@ -1,0 +1,41 @@
+\hypertarget{wifi__ap_8c}{}\doxysection{main/wifi\+\_\+ap.c File Reference}
+\label{wifi__ap_8c}\index{main/wifi\_ap.c@{main/wifi\_ap.c}}
+
+
+Wi\+Fi Access Point Configuration and Management.  
+
+
+{\ttfamily \#include \char`\"{}wifi\+\_\+ap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+wifi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+event.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+log.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}esp\+\_\+netif.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for wifi\+\_\+ap.\+c\+:
+% FIG 0
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__WiFi__Management_ga56ee34255f5306176ee8fea2137397d4}{AP\+\_\+\+SSID}}~\char`\"{}Motor Controller\char`\"{}
+\begin{DoxyCompactList}\small\item\em Wi\+Fi network name (SSID) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__WiFi__Management_ga9fee3cc704e47eccf1457818bdaa68a8}{AP\+\_\+\+PASSWORD}}~\char`\"{}12345679\char`\"{}
+\begin{DoxyCompactList}\small\item\em Wi\+Fi network password. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__WiFi__Management_gaeb5e44111f7b1409c0c52209ef57e17f}{AP\+\_\+\+MAX\+\_\+\+STA\+\_\+\+CONN}}~4
+\begin{DoxyCompactList}\small\item\em Maximum simultaneous connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__WiFi__Management_ga4a2bc421f17a5713e35165034943cea3}{wifi\+\_\+init\+\_\+softap}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize and start Wi\+Fi Access Point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wi\+Fi Access Point Configuration and Management. 
+
+\begin{DoxyAuthor}{Author}
+Motor Controller Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025
+\end{DoxyDate}
+This module implements Wi\+Fi Access Point functionality for the motor controller. It creates a standalone Wi\+Fi network that allows devices to connect directly to the ESP32 without requiring an existing Wi\+Fi infrastructure. The AP mode enables web interface access for motor control and configuration. 

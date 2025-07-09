@@ -1,0 +1,88 @@
+\hypertarget{group__Schedule__Management}{}\doxysection{Schedule Management Functions}
+\label{group__Schedule__Management}\index{Schedule Management Functions@{Schedule Management Functions}}
+
+
+Functions for managing motor schedules and execution history.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__Schedule__Management_ga6f6409385677dd94d04e999017ee71b0}{add\+\_\+to\+\_\+history}} (const char $\ast$schedule\+\_\+name, const char $\ast$action)
+\begin{DoxyCompactList}\small\item\em Add an entry to the schedule execution history. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Schedule__Management_gaccfbb70299f2c744b57e76a32875bfe9}{check\+\_\+schedules}} (void)
+\begin{DoxyCompactList}\small\item\em Check and execute scheduled motor operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for managing motor schedules and execution history. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__Schedule__Management_ga6f6409385677dd94d04e999017ee71b0}\label{group__Schedule__Management_ga6f6409385677dd94d04e999017ee71b0}} 
+\index{Schedule Management Functions@{Schedule Management Functions}!add\_to\_history@{add\_to\_history}}
+\index{add\_to\_history@{add\_to\_history}!Schedule Management Functions@{Schedule Management Functions}}
+\doxysubsubsection{\texorpdfstring{add\_to\_history()}{add\_to\_history()}}
+{\footnotesize\ttfamily void add\+\_\+to\+\_\+history (\begin{DoxyParamCaption}\item[{const char $\ast$}]{schedule\+\_\+name,  }\item[{const char $\ast$}]{action }\end{DoxyParamCaption})}
+
+
+
+Add an entry to the schedule execution history. 
+
+Records when a schedule action (ON/\+OFF) occurs, maintaining a history of motor operations. Handles both start and end events for schedules.
+
+
+\begin{DoxyParams}{Parameters}
+{\em schedule\+\_\+name} & Name of the schedule being executed \\
+\hline
+{\em action} & Action performed (\char`\"{}\+ON\char`\"{} or \char`\"{}\+OFF\char`\"{})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The function automatically manages history array bounds and shifts older entries when the maximum is reached.
+\end{DoxyNote}
+Add an entry to the schedule execution history.
+
+Records schedule events (start/stop) in the history array with timestamps. Manages history array overflow by shifting older entries. For \char`\"{}\+ON\char`\"{} events, prevents duplicate active entries for the same schedule. For \char`\"{}\+OFF\char`\"{} events, updates the end time of matching active entries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em schedule\+\_\+name} & Name of the schedule that triggered the event \\
+\hline
+{\em action} & Action performed (\char`\"{}\+ON\char`\"{} or \char`\"{}\+OFF\char`\"{})\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+History is automatically saved to flash storage after each addition 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Storage_gafd45f9e5ac12f008aa62728519ed4bd6}{save\+\_\+history\+\_\+to\+\_\+flash()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__Schedule__Management_gaccfbb70299f2c744b57e76a32875bfe9}\label{group__Schedule__Management_gaccfbb70299f2c744b57e76a32875bfe9}} 
+\index{Schedule Management Functions@{Schedule Management Functions}!check\_schedules@{check\_schedules}}
+\index{check\_schedules@{check\_schedules}!Schedule Management Functions@{Schedule Management Functions}}
+\doxysubsubsection{\texorpdfstring{check\_schedules()}{check\_schedules()}}
+{\footnotesize\ttfamily void check\+\_\+schedules (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check and execute scheduled motor operations. 
+
+Examines all enabled schedules and executes any that match the current time. Handles both start and end times for schedules, and manages one-\/time vs. daily repeating schedules.
+
+\begin{DoxyNote}{Note}
+This function should be called periodically (recommended every 30 seconds) to ensure schedules are executed on time.
+\end{DoxyNote}
+Periodically checks all enabled schedules against current time and executes motor operations when scheduled times are reached. Handles missed events by checking all minutes since last execution. Supports one-\/time and daily repeat schedules.
+
+The function maintains state to prevent duplicate executions and handles schedule lifecycle (disabling one-\/time schedules after completion).
+
+\begin{DoxyNote}{Note}
+Should be called regularly (e.\+g., every minute) from main loop 
+
+First call initializes the checking mechanism without executing schedules 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Motor__Control_ga464415ba555c0bcab1f9b262bd8167f0}{motor\+\_\+on()}}, \mbox{\hyperlink{group__Motor__Control_ga754e0993eea9785f729c9cfe486fba02}{motor\+\_\+off()}}, \mbox{\hyperlink{group__Schedule__Management_ga6f6409385677dd94d04e999017ee71b0}{add\+\_\+to\+\_\+history()}} 
+\end{DoxySeeAlso}

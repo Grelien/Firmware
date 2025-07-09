@@ -1,0 +1,61 @@
+\hypertarget{group__WiFi__AP}{}\doxysection{Wi\+Fi Access Point Functions}
+\label{group__WiFi__AP}\index{WiFi Access Point Functions@{WiFi Access Point Functions}}
+
+
+Functions for setting up and managing Wi\+Fi Access Point mode.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__WiFi__AP_ga4a2bc421f17a5713e35165034943cea3}{wifi\+\_\+init\+\_\+softap}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Wi\+Fi in Access Point mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for setting up and managing Wi\+Fi Access Point mode. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__WiFi__AP_ga4a2bc421f17a5713e35165034943cea3}\label{group__WiFi__AP_ga4a2bc421f17a5713e35165034943cea3}} 
+\index{WiFi Access Point Functions@{WiFi Access Point Functions}!wifi\_init\_softap@{wifi\_init\_softap}}
+\index{wifi\_init\_softap@{wifi\_init\_softap}!WiFi Access Point Functions@{WiFi Access Point Functions}}
+\doxysubsubsection{\texorpdfstring{wifi\_init\_softap()}{wifi\_init\_softap()}}
+{\footnotesize\ttfamily void wifi\+\_\+init\+\_\+softap (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize Wi\+Fi in Access Point mode. 
+
+Configures the ESP32 as a Wi\+Fi Access Point with predefined credentials, allowing direct connection without requiring an existing network.
+
+Configuration details\+:
+\begin{DoxyItemize}
+\item SSID\+: \char`\"{}\+Motor Controller\char`\"{}
+\item Password\+: \char`\"{}12345679\char`\"{}
+\item Channel\+: 1
+\item Max connections\+: 4
+\item Security\+: WPA/\+WPA2-\/\+PSK
+\end{DoxyItemize}
+
+\begin{DoxyNote}{Note}
+Creates a network at IP 192.\+168.\+4.\+1 for web interface access
+\end{DoxyNote}
+Initialize Wi\+Fi in Access Point mode.
+
+Configures the ESP32 as a Wi\+Fi Access Point with predefined network settings. Creates a standalone Wi\+Fi network that other devices can connect to for accessing the web interface. Handles network interface initialization, Wi\+Fi configuration, and AP startup.
+
+\begin{DoxyNote}{Note}
+Network details\+:
+\begin{DoxyItemize}
+\item SSID\+: \char`\"{}\+Motor Controller\char`\"{}
+\item Password\+: \char`\"{}12345679\char`\"{} ~\newline
+
+\item IP Address\+: 192.\+168.\+4.\+1
+\item Channel\+: 1
+\item Max Connections\+: 4
+\end{DoxyItemize}
+
+This function blocks until Wi\+Fi AP is successfully started 
+\end{DoxyNote}

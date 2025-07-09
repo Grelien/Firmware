@@ -1,0 +1,13 @@
+var searchData=
+[
+  ['save_5fhistory_5fto_5fflash_1241',['save_history_to_flash',['../group__Storage__Management.html#gafd45f9e5ac12f008aa62728519ed4bd6',1,'save_history_to_flash(void):&#160;storage.c'],['../group__Storage.html#gafd45f9e5ac12f008aa62728519ed4bd6',1,'save_history_to_flash(void):&#160;storage.c']]],
+  ['save_5fsettings_1242',['save_settings',['../group__Storage.html#ga2ea83bdac732caa4f9cb7806d0d34d79',1,'save_settings(void):&#160;storage.c'],['../group__Storage__Management.html#ga2ea83bdac732caa4f9cb7806d0d34d79',1,'save_settings(void):&#160;storage.c']]],
+  ['save_5fsettings_5fhandler_1243',['save_settings_handler',['../group__Web__Server.html#ga9c299ede5b6ea13093c2cd7220ca20e1',1,'save_settings_handler(httpd_req_t *req):&#160;webserver.c'],['../group__HTTP__Handlers.html#ga9c299ede5b6ea13093c2cd7220ca20e1',1,'save_settings_handler(httpd_req_t *req):&#160;webserver.c']]],
+  ['save_5ftime_5fto_5fflash_1244',['save_time_to_flash',['../group__Storage.html#gadfa5a5d4d22b0fd6e9eddfeb4ff74d9f',1,'save_time_to_flash(void):&#160;storage.c'],['../group__Storage__Management.html#gadfa5a5d4d22b0fd6e9eddfeb4ff74d9f',1,'save_time_to_flash(void):&#160;storage.c']]],
+  ['schedule_5fcheck_5ftask_1245',['schedule_check_task',['../motor__controller_8c.html#a7216159f1debadffa50b4e71d35c50b8',1,'motor_controller.c']]],
+  ['schedules_5fhandler_1246',['schedules_handler',['../group__Web__Server.html#gac48af00fc792e81230c8452487320728',1,'schedules_handler(httpd_req_t *req):&#160;webserver.c'],['../group__HTTP__Handlers.html#gac48af00fc792e81230c8452487320728',1,'schedules_handler(httpd_req_t *req):&#160;webserver.c']]],
+  ['set_5fpins_5fto_5ffloat_1247',['set_pins_to_float',['../group__Motor__Control.html#gaaa8730f656c79c1877997d7f3af63027',1,'set_pins_to_float(void):&#160;motor_control.c'],['../group__Motor__Control.html#gaaa8730f656c79c1877997d7f3af63027',1,'set_pins_to_float(void):&#160;motor_control.c']]],
+  ['settings_5fhandler_1248',['settings_handler',['../group__Web__Server.html#ga567816ec4bcd20cd5e26ffa406f96524',1,'settings_handler(httpd_req_t *req):&#160;webserver.c'],['../group__HTTP__Handlers.html#ga567816ec4bcd20cd5e26ffa406f96524',1,'settings_handler(httpd_req_t *req):&#160;webserver.c']]],
+  ['start_5fwebserver_1249',['start_webserver',['../group__Web__Server.html#gac8424af0e02fc49a4e81fa6f4e455827',1,'webserver.c']]],
+  ['status_5fhandler_1250',['status_handler',['../group__Web__Server.html#gabf5de309a34fbaa6611fe1c6f4cd9abc',1,'status_handler(httpd_req_t *req):&#160;webserver.c'],['../group__HTTP__Handlers.html#gabf5de309a34fbaa6611fe1c6f4cd9abc',1,'status_handler(httpd_req_t *req):&#160;webserver.c']]]
+];

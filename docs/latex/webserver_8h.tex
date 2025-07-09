@@ -1,0 +1,55 @@
+\hypertarget{webserver_8h}{}\doxysection{main/webserver.h File Reference}
+\label{webserver_8h}\index{main/webserver.h@{main/webserver.h}}
+
+
+Web server interface and HTTP handler declarations.  
+
+
+{\ttfamily \#include \char`\"{}esp\+\_\+http\+\_\+server.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}types.\+h\char`\"{}}\newline
+Include dependency graph for webserver.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__Web__Server_gac8424af0e02fc49a4e81fa6f4e455827}{start\+\_\+webserver}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize and start the HTTP web server. \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_gadd29c8e887c995e7abc859e3cdde3e22}{root\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle requests to the root page (/) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga87b689240791fd6b7d2aecbb07eb9119}{motor\+\_\+on\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle motor ON requests (/motor/on) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga97f6255787070f48bf0dccda9970234f}{motor\+\_\+off\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle motor OFF requests (/motor/off) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_gabf5de309a34fbaa6611fe1c6f4cd9abc}{status\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle status API requests (/status) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga4c6cf2d305f657bf93b3be4c0f88912c}{time\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle time display requests (/time) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_gac48af00fc792e81230c8452487320728}{schedules\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle schedule management page requests (/schedules) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_gad57382b919a958c5c7c28755a63e4830}{add\+\_\+schedule\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle add schedule requests (/add\+\_\+schedule) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga37e05cf3eef20e8baeeea1067f21e0d4}{delete\+\_\+schedule\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle delete schedule requests (/delete\+\_\+schedule) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga567816ec4bcd20cd5e26ffa406f96524}{settings\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle settings page requests (/settings) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga9c299ede5b6ea13093c2cd7220ca20e1}{save\+\_\+settings\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle save settings requests (/save\+\_\+settings) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga4c1c69a929a17a11b96d47f320c8e6d8}{manual\+\_\+time\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle manual time setting requests (/manual\+\_\+time) \end{DoxyCompactList}\item 
+esp\+\_\+err\+\_\+t \mbox{\hyperlink{group__HTTP__Handlers_ga2a2f052ad2fbe978da88f43760dd346d}{logo\+\_\+handler}} (httpd\+\_\+req\+\_\+t $\ast$req)
+\begin{DoxyCompactList}\small\item\em Handle logo image requests (/logo.png) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Utility__Functions_ga6803fda5eaf9933f36a55fbe17df19d3}{url\+\_\+decode}} (char $\ast$dst, const char $\ast$src)
+\begin{DoxyCompactList}\small\item\em URL decode a string in-\/place. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Web server interface and HTTP handler declarations. 
+
+\begin{DoxyAuthor}{Author}
+Motor Controller Team 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2025 
+\end{DoxyDate}

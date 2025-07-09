@@ -1,0 +1,82 @@
+\hypertarget{group__WiFi__Management}{}\doxysection{Wi\+Fi Access Point Management}
+\label{group__WiFi__Management}\index{WiFi Access Point Management@{WiFi Access Point Management}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__WiFi__Management_ga56ee34255f5306176ee8fea2137397d4}{AP\+\_\+\+SSID}}~\char`\"{}Motor Controller\char`\"{}
+\begin{DoxyCompactList}\small\item\em Wi\+Fi network name (SSID) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__WiFi__Management_ga9fee3cc704e47eccf1457818bdaa68a8}{AP\+\_\+\+PASSWORD}}~\char`\"{}12345679\char`\"{}
+\begin{DoxyCompactList}\small\item\em Wi\+Fi network password. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__WiFi__Management_gaeb5e44111f7b1409c0c52209ef57e17f}{AP\+\_\+\+MAX\+\_\+\+STA\+\_\+\+CONN}}~4
+\begin{DoxyCompactList}\small\item\em Maximum simultaneous connections. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__WiFi__Management_ga4a2bc421f17a5713e35165034943cea3}{wifi\+\_\+init\+\_\+softap}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize and start Wi\+Fi Access Point. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__WiFi__Management_gaeb5e44111f7b1409c0c52209ef57e17f}\label{group__WiFi__Management_gaeb5e44111f7b1409c0c52209ef57e17f}} 
+\index{WiFi Access Point Management@{WiFi Access Point Management}!AP\_MAX\_STA\_CONN@{AP\_MAX\_STA\_CONN}}
+\index{AP\_MAX\_STA\_CONN@{AP\_MAX\_STA\_CONN}!WiFi Access Point Management@{WiFi Access Point Management}}
+\doxysubsubsection{\texorpdfstring{AP\_MAX\_STA\_CONN}{AP\_MAX\_STA\_CONN}}
+{\footnotesize\ttfamily \#define AP\+\_\+\+MAX\+\_\+\+STA\+\_\+\+CONN~4}
+
+
+
+Maximum simultaneous connections. 
+
+\mbox{\Hypertarget{group__WiFi__Management_ga9fee3cc704e47eccf1457818bdaa68a8}\label{group__WiFi__Management_ga9fee3cc704e47eccf1457818bdaa68a8}} 
+\index{WiFi Access Point Management@{WiFi Access Point Management}!AP\_PASSWORD@{AP\_PASSWORD}}
+\index{AP\_PASSWORD@{AP\_PASSWORD}!WiFi Access Point Management@{WiFi Access Point Management}}
+\doxysubsubsection{\texorpdfstring{AP\_PASSWORD}{AP\_PASSWORD}}
+{\footnotesize\ttfamily \#define AP\+\_\+\+PASSWORD~\char`\"{}12345679\char`\"{}}
+
+
+
+Wi\+Fi network password. 
+
+\mbox{\Hypertarget{group__WiFi__Management_ga56ee34255f5306176ee8fea2137397d4}\label{group__WiFi__Management_ga56ee34255f5306176ee8fea2137397d4}} 
+\index{WiFi Access Point Management@{WiFi Access Point Management}!AP\_SSID@{AP\_SSID}}
+\index{AP\_SSID@{AP\_SSID}!WiFi Access Point Management@{WiFi Access Point Management}}
+\doxysubsubsection{\texorpdfstring{AP\_SSID}{AP\_SSID}}
+{\footnotesize\ttfamily \#define AP\+\_\+\+SSID~\char`\"{}Motor Controller\char`\"{}}
+
+
+
+Wi\+Fi network name (SSID) 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__WiFi__Management_ga4a2bc421f17a5713e35165034943cea3}\label{group__WiFi__Management_ga4a2bc421f17a5713e35165034943cea3}} 
+\index{WiFi Access Point Management@{WiFi Access Point Management}!wifi\_init\_softap@{wifi\_init\_softap}}
+\index{wifi\_init\_softap@{wifi\_init\_softap}!WiFi Access Point Management@{WiFi Access Point Management}}
+\doxysubsubsection{\texorpdfstring{wifi\_init\_softap()}{wifi\_init\_softap()}}
+{\footnotesize\ttfamily void wifi\+\_\+init\+\_\+softap (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize and start Wi\+Fi Access Point. 
+
+Initialize Wi\+Fi in Access Point mode.
+
+Configures the ESP32 as a Wi\+Fi Access Point with predefined network settings. Creates a standalone Wi\+Fi network that other devices can connect to for accessing the web interface. Handles network interface initialization, Wi\+Fi configuration, and AP startup.
+
+\begin{DoxyNote}{Note}
+Network details\+:
+\begin{DoxyItemize}
+\item SSID\+: \char`\"{}\+Motor Controller\char`\"{}
+\item Password\+: \char`\"{}12345679\char`\"{} ~\newline
+
+\item IP Address\+: 192.\+168.\+4.\+1
+\item Channel\+: 1
+\item Max Connections\+: 4
+\end{DoxyItemize}
+
+This function blocks until Wi\+Fi AP is successfully started 
+\end{DoxyNote}

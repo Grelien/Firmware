@@ -1,0 +1,59 @@
+\hypertarget{structschedule__history__t}{}\doxysection{schedule\+\_\+history\+\_\+t Struct Reference}
+\label{structschedule__history__t}\index{schedule\_history\_t@{schedule\_history\_t}}
+
+
+Schedule execution history entry.  
+
+
+
+
+{\ttfamily \#include $<$types.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{structschedule__history__t_a6304a3a621af9df80dd7f16cc22d6f6b}{name}} \mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]}
+\item 
+char \mbox{\hyperlink{structschedule__history__t_ad32ff2435ecab9dd46f0a96530393525}{start\+\_\+time}} \mbox{[}20\mbox{]}
+\item 
+char \mbox{\hyperlink{structschedule__history__t_a1abdade712faf108dd026d9ca01a592c}{end\+\_\+time}} \mbox{[}20\mbox{]}
+\item 
+bool \mbox{\hyperlink{structschedule__history__t_aa8264acd80cca157fe6dfcc7e00be2a4}{active}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Schedule execution history entry. 
+
+Records when a schedule was executed, including start and end times. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structschedule__history__t_aa8264acd80cca157fe6dfcc7e00be2a4}\label{structschedule__history__t_aa8264acd80cca157fe6dfcc7e00be2a4}} 
+\index{schedule\_history\_t@{schedule\_history\_t}!active@{active}}
+\index{active@{active}!schedule\_history\_t@{schedule\_history\_t}}
+\doxysubsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily bool schedule\+\_\+history\+\_\+t\+::active}
+
+Whether this schedule execution is currently active \mbox{\Hypertarget{structschedule__history__t_a1abdade712faf108dd026d9ca01a592c}\label{structschedule__history__t_a1abdade712faf108dd026d9ca01a592c}} 
+\index{schedule\_history\_t@{schedule\_history\_t}!end\_time@{end\_time}}
+\index{end\_time@{end\_time}!schedule\_history\_t@{schedule\_history\_t}}
+\doxysubsubsection{\texorpdfstring{end\_time}{end\_time}}
+{\footnotesize\ttfamily char schedule\+\_\+history\+\_\+t\+::end\+\_\+time\mbox{[}20\mbox{]}}
+
+ISO format end time (YYYY-\/\+MM-\/\+DD HH\+:MM) \mbox{\Hypertarget{structschedule__history__t_a6304a3a621af9df80dd7f16cc22d6f6b}\label{structschedule__history__t_a6304a3a621af9df80dd7f16cc22d6f6b}} 
+\index{schedule\_history\_t@{schedule\_history\_t}!name@{name}}
+\index{name@{name}!schedule\_history\_t@{schedule\_history\_t}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char schedule\+\_\+history\+\_\+t\+::name\mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]}}
+
+Name of the schedule that was executed \mbox{\Hypertarget{structschedule__history__t_ad32ff2435ecab9dd46f0a96530393525}\label{structschedule__history__t_ad32ff2435ecab9dd46f0a96530393525}} 
+\index{schedule\_history\_t@{schedule\_history\_t}!start\_time@{start\_time}}
+\index{start\_time@{start\_time}!schedule\_history\_t@{schedule\_history\_t}}
+\doxysubsubsection{\texorpdfstring{start\_time}{start\_time}}
+{\footnotesize\ttfamily char schedule\+\_\+history\+\_\+t\+::start\+\_\+time\mbox{[}20\mbox{]}}
+
+ISO format start time (YYYY-\/\+MM-\/\+DD HH\+:MM) 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/\mbox{\hyperlink{types_8h}{types.\+h}}\end{DoxyCompactItemize}

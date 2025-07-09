@@ -1,0 +1,107 @@
+\hypertarget{structschedule__t}{}\doxysection{schedule\+\_\+t Struct Reference}
+\label{structschedule__t}\index{schedule\_t@{schedule\_t}}
+
+
+Schedule configuration structure.  
+
+
+
+
+{\ttfamily \#include $<$types.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{structschedule__t_ade394ee926f79dedd59a36979fca5ed7}{enabled}}
+\item 
+int \mbox{\hyperlink{structschedule__t_a71af9ea75f09a4afdd6fa50c4057ea57}{hour}}
+\item 
+int \mbox{\hyperlink{structschedule__t_ace9f58d896c0235b40ffcee62673adba}{minute}}
+\item 
+bool \mbox{\hyperlink{structschedule__t_a7fc9d5b6df40a9d0cc6e978948c72769}{action}}
+\item 
+int \mbox{\hyperlink{structschedule__t_a6f018641e642c447b616eef1f79f5df3}{start\+\_\+hour}}
+\item 
+int \mbox{\hyperlink{structschedule__t_ad53a8e1596390aeafe43bcac35f1902d}{start\+\_\+minute}}
+\item 
+int \mbox{\hyperlink{structschedule__t_a24a2c88fe354a8465a7421bd292dda07}{end\+\_\+hour}}
+\item 
+int \mbox{\hyperlink{structschedule__t_a202aaf8c23d9b42bd42625a99c26151b}{end\+\_\+minute}}
+\item 
+bool \mbox{\hyperlink{structschedule__t_aa865003a59173d0258e9757e0377e246}{repeat\+\_\+daily}}
+\item 
+char \mbox{\hyperlink{structschedule__t_a9d132766044341a25c206c2f62cc051d}{name}} \mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Schedule configuration structure. 
+
+This structure defines a motor schedule with start/end times, repeat settings, and identification information. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structschedule__t_a7fc9d5b6df40a9d0cc6e978948c72769}\label{structschedule__t_a7fc9d5b6df40a9d0cc6e978948c72769}} 
+\index{schedule\_t@{schedule\_t}!action@{action}}
+\index{action@{action}!schedule\_t@{schedule\_t}}
+\doxysubsubsection{\texorpdfstring{action}{action}}
+{\footnotesize\ttfamily bool schedule\+\_\+t\+::action}
+
+Legacy action field (deprecated) \mbox{\Hypertarget{structschedule__t_ade394ee926f79dedd59a36979fca5ed7}\label{structschedule__t_ade394ee926f79dedd59a36979fca5ed7}} 
+\index{schedule\_t@{schedule\_t}!enabled@{enabled}}
+\index{enabled@{enabled}!schedule\_t@{schedule\_t}}
+\doxysubsubsection{\texorpdfstring{enabled}{enabled}}
+{\footnotesize\ttfamily bool schedule\+\_\+t\+::enabled}
+
+Whether this schedule is active \mbox{\Hypertarget{structschedule__t_a24a2c88fe354a8465a7421bd292dda07}\label{structschedule__t_a24a2c88fe354a8465a7421bd292dda07}} 
+\index{schedule\_t@{schedule\_t}!end\_hour@{end\_hour}}
+\index{end\_hour@{end\_hour}!schedule\_t@{schedule\_t}}
+\doxysubsubsection{\texorpdfstring{end\_hour}{end\_hour}}
+{\footnotesize\ttfamily int schedule\+\_\+t\+::end\+\_\+hour}
+
+Schedule end hour (0-\/23) \mbox{\Hypertarget{structschedule__t_a202aaf8c23d9b42bd42625a99c26151b}\label{structschedule__t_a202aaf8c23d9b42bd42625a99c26151b}} 
+\index{schedule\_t@{schedule\_t}!end\_minute@{end\_minute}}
+\index{end\_minute@{end\_minute}!schedule\_t@{schedule\_t}}
+\doxysubsubsection{\texorpdfstring{end\_minute}{end\_minute}}
+{\footnotesize\ttfamily int schedule\+\_\+t\+::end\+\_\+minute}
+
+Schedule end minute (0-\/59) \mbox{\Hypertarget{structschedule__t_a71af9ea75f09a4afdd6fa50c4057ea57}\label{structschedule__t_a71af9ea75f09a4afdd6fa50c4057ea57}} 
+\index{schedule\_t@{schedule\_t}!hour@{hour}}
+\index{hour@{hour}!schedule\_t@{schedule\_t}}
+\doxysubsubsection{\texorpdfstring{hour}{hour}}
+{\footnotesize\ttfamily int schedule\+\_\+t\+::hour}
+
+Legacy hour field (deprecated) \mbox{\Hypertarget{structschedule__t_ace9f58d896c0235b40ffcee62673adba}\label{structschedule__t_ace9f58d896c0235b40ffcee62673adba}} 
+\index{schedule\_t@{schedule\_t}!minute@{minute}}
+\index{minute@{minute}!schedule\_t@{schedule\_t}}
+\doxysubsubsection{\texorpdfstring{minute}{minute}}
+{\footnotesize\ttfamily int schedule\+\_\+t\+::minute}
+
+Legacy minute field (deprecated) \mbox{\Hypertarget{structschedule__t_a9d132766044341a25c206c2f62cc051d}\label{structschedule__t_a9d132766044341a25c206c2f62cc051d}} 
+\index{schedule\_t@{schedule\_t}!name@{name}}
+\index{name@{name}!schedule\_t@{schedule\_t}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char schedule\+\_\+t\+::name\mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]}}
+
+Human-\/readable name for this schedule \mbox{\Hypertarget{structschedule__t_aa865003a59173d0258e9757e0377e246}\label{structschedule__t_aa865003a59173d0258e9757e0377e246}} 
+\index{schedule\_t@{schedule\_t}!repeat\_daily@{repeat\_daily}}
+\index{repeat\_daily@{repeat\_daily}!schedule\_t@{schedule\_t}}
+\doxysubsubsection{\texorpdfstring{repeat\_daily}{repeat\_daily}}
+{\footnotesize\ttfamily bool schedule\+\_\+t\+::repeat\+\_\+daily}
+
+Whether to repeat this schedule daily \mbox{\Hypertarget{structschedule__t_a6f018641e642c447b616eef1f79f5df3}\label{structschedule__t_a6f018641e642c447b616eef1f79f5df3}} 
+\index{schedule\_t@{schedule\_t}!start\_hour@{start\_hour}}
+\index{start\_hour@{start\_hour}!schedule\_t@{schedule\_t}}
+\doxysubsubsection{\texorpdfstring{start\_hour}{start\_hour}}
+{\footnotesize\ttfamily int schedule\+\_\+t\+::start\+\_\+hour}
+
+Schedule start hour (0-\/23) \mbox{\Hypertarget{structschedule__t_ad53a8e1596390aeafe43bcac35f1902d}\label{structschedule__t_ad53a8e1596390aeafe43bcac35f1902d}} 
+\index{schedule\_t@{schedule\_t}!start\_minute@{start\_minute}}
+\index{start\_minute@{start\_minute}!schedule\_t@{schedule\_t}}
+\doxysubsubsection{\texorpdfstring{start\_minute}{start\_minute}}
+{\footnotesize\ttfamily int schedule\+\_\+t\+::start\+\_\+minute}
+
+Schedule start minute (0-\/59) 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/\mbox{\hyperlink{types_8h}{types.\+h}}\end{DoxyCompactItemize}

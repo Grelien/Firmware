@@ -1,0 +1,197 @@
+\hypertarget{group__Global__Variables}{}\doxysection{Global Variable Declarations}
+\label{group__Global__Variables}\index{Global Variable Declarations@{Global Variable Declarations}}
+
+
+External declarations for global system variables.  
+
+
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__Global__Variables_gac25cc836ee7b0063b02a1da3f74bf537}{motor\+\_\+state}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__Global__Variables_ga8ba03532cceb98f2700598e4b8ebab48}{schedule\+\_\+count}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__Global__Variables_gaaeeff701039c2f46b51e4f0d562b1e3d}{history\+\_\+count}}
+\item 
+char \mbox{\hyperlink{group__Global__Variables_ga379a6db0628febd9a7960103c5a1562b}{device\+\_\+name}} \mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]}
+\item 
+char \mbox{\hyperlink{group__Global__Variables_gac129e26f9f1f6146194084abb5376f57}{device\+\_\+location}} \mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]}
+\item 
+\mbox{\hyperlink{structschedule__t}{schedule\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga5ef1c562fc22c967963564629bf09a94}{schedules}} \mbox{[}\mbox{\hyperlink{group__Configuration_gac716cf158367d8f76483f00b0cd049ad}{MAX\+\_\+\+SCHEDULES}}\mbox{]}
+\item 
+\mbox{\hyperlink{structschedule__history__t}{schedule\+\_\+history\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga22ee64e19704e2ee3653245d85743d65}{schedule\+\_\+history}} \mbox{[}\mbox{\hyperlink{group__Configuration_gabf8d8994f09509f9e061f5bf82daf4cd}{MAX\+\_\+\+HISTORY}}\mbox{]}
+\item 
+\mbox{\hyperlink{structsaved__time__t}{saved\+\_\+time\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga5b22cc9d737a63bfbe005666ba7b4edc}{last\+\_\+known\+\_\+time}}
+\item 
+httpd\+\_\+handle\+\_\+t \mbox{\hyperlink{group__Global__Variables_ga021c2db71a5647e2e98217b3f9b5401e}{server}}
+\item 
+nvs\+\_\+handle\+\_\+t \mbox{\hyperlink{group__Global__Variables_gaaec1872a025597d6dd7ac7b252113ce5}{g\+\_\+nvs\+\_\+handle}}
+\item 
+bool \mbox{\hyperlink{group__Global__Variables_gac25cc836ee7b0063b02a1da3f74bf537}{motor\+\_\+state}} = false
+\begin{DoxyCompactList}\small\item\em Current motor state variable. \end{DoxyCompactList}\item 
+int32\+\_\+t \mbox{\hyperlink{group__Global__Variables_ga8ba03532cceb98f2700598e4b8ebab48}{schedule\+\_\+count}} = 0
+\item 
+int32\+\_\+t \mbox{\hyperlink{group__Global__Variables_gaaeeff701039c2f46b51e4f0d562b1e3d}{history\+\_\+count}} = 0
+\item 
+char \mbox{\hyperlink{group__Global__Variables_ga379a6db0628febd9a7960103c5a1562b}{device\+\_\+name}} \mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]} = \char`\"{}Motor Controller\char`\"{}
+\item 
+char \mbox{\hyperlink{group__Global__Variables_gac129e26f9f1f6146194084abb5376f57}{device\+\_\+location}} \mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]} = \char`\"{}Green House\char`\"{}
+\item 
+\mbox{\hyperlink{structschedule__t}{schedule\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga5ef1c562fc22c967963564629bf09a94}{schedules}} \mbox{[}\mbox{\hyperlink{group__Configuration_gac716cf158367d8f76483f00b0cd049ad}{MAX\+\_\+\+SCHEDULES}}\mbox{]}
+\item 
+\mbox{\hyperlink{structschedule__history__t}{schedule\+\_\+history\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga22ee64e19704e2ee3653245d85743d65}{schedule\+\_\+history}} \mbox{[}\mbox{\hyperlink{group__Configuration_gabf8d8994f09509f9e061f5bf82daf4cd}{MAX\+\_\+\+HISTORY}}\mbox{]}
+\item 
+\mbox{\hyperlink{structsaved__time__t}{saved\+\_\+time\+\_\+t}} \mbox{\hyperlink{group__Global__Variables_ga5b22cc9d737a63bfbe005666ba7b4edc}{last\+\_\+known\+\_\+time}}
+\item 
+httpd\+\_\+handle\+\_\+t \mbox{\hyperlink{group__Global__Variables_ga021c2db71a5647e2e98217b3f9b5401e}{server}} = NULL
+\item 
+nvs\+\_\+handle\+\_\+t \mbox{\hyperlink{group__Global__Variables_gaaec1872a025597d6dd7ac7b252113ce5}{g\+\_\+nvs\+\_\+handle}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+External declarations for global system variables. 
+
+Actual definitions of global system variables.
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{group__Global__Variables_gac129e26f9f1f6146194084abb5376f57}\label{group__Global__Variables_gac129e26f9f1f6146194084abb5376f57}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!device\_location@{device\_location}}
+\index{device\_location@{device\_location}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{device\_location}{device\_location}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily char device\+\_\+location\mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+User-\/configurable device location
+
+Device location \mbox{\Hypertarget{group__Global__Variables_gac129e26f9f1f6146194084abb5376f57}\label{group__Global__Variables_gac129e26f9f1f6146194084abb5376f57}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!device\_location@{device\_location}}
+\index{device\_location@{device\_location}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{device\_location}{device\_location}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily char device\+\_\+location\mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]} = \char`\"{}Green House\char`\"{}}
+
+Device location \mbox{\Hypertarget{group__Global__Variables_ga379a6db0628febd9a7960103c5a1562b}\label{group__Global__Variables_ga379a6db0628febd9a7960103c5a1562b}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!device\_name@{device\_name}}
+\index{device\_name@{device\_name}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{device\_name}{device\_name}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily char device\+\_\+name\mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+User-\/configurable device name
+
+Device name \mbox{\Hypertarget{group__Global__Variables_ga379a6db0628febd9a7960103c5a1562b}\label{group__Global__Variables_ga379a6db0628febd9a7960103c5a1562b}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!device\_name@{device\_name}}
+\index{device\_name@{device\_name}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{device\_name}{device\_name}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily char device\+\_\+name\mbox{[}\mbox{\hyperlink{group__Configuration_gafd709f201d7643c3909621f620ea648a}{MAX\+\_\+\+NAME\+\_\+\+LEN}}\mbox{]} = \char`\"{}Motor Controller\char`\"{}}
+
+Device name \mbox{\Hypertarget{group__Global__Variables_gaaec1872a025597d6dd7ac7b252113ce5}\label{group__Global__Variables_gaaec1872a025597d6dd7ac7b252113ce5}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!g\_nvs\_handle@{g\_nvs\_handle}}
+\index{g\_nvs\_handle@{g\_nvs\_handle}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{g\_nvs\_handle}{g\_nvs\_handle}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily nvs\+\_\+handle\+\_\+t g\+\_\+nvs\+\_\+handle\hspace{0.3cm}{\ttfamily [extern]}}
+
+NVS storage handle \mbox{\Hypertarget{group__Global__Variables_gaaec1872a025597d6dd7ac7b252113ce5}\label{group__Global__Variables_gaaec1872a025597d6dd7ac7b252113ce5}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!g\_nvs\_handle@{g\_nvs\_handle}}
+\index{g\_nvs\_handle@{g\_nvs\_handle}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{g\_nvs\_handle}{g\_nvs\_handle}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily nvs\+\_\+handle\+\_\+t g\+\_\+nvs\+\_\+handle}
+
+NVS storage handle \mbox{\Hypertarget{group__Global__Variables_gaaeeff701039c2f46b51e4f0d562b1e3d}\label{group__Global__Variables_gaaeeff701039c2f46b51e4f0d562b1e3d}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!history\_count@{history\_count}}
+\index{history\_count@{history\_count}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{history\_count}{history\_count}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int32\+\_\+t history\+\_\+count\hspace{0.3cm}{\ttfamily [extern]}}
+
+Number of history entries \mbox{\Hypertarget{group__Global__Variables_gaaeeff701039c2f46b51e4f0d562b1e3d}\label{group__Global__Variables_gaaeeff701039c2f46b51e4f0d562b1e3d}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!history\_count@{history\_count}}
+\index{history\_count@{history\_count}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{history\_count}{history\_count}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int32\+\_\+t history\+\_\+count = 0}
+
+Number of history entries \mbox{\Hypertarget{group__Global__Variables_ga5b22cc9d737a63bfbe005666ba7b4edc}\label{group__Global__Variables_ga5b22cc9d737a63bfbe005666ba7b4edc}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!last\_known\_time@{last\_known\_time}}
+\index{last\_known\_time@{last\_known\_time}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{last\_known\_time}{last\_known\_time}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsaved__time__t}{saved\+\_\+time\+\_\+t}} last\+\_\+known\+\_\+time\hspace{0.3cm}{\ttfamily [extern]}}
+
+Last known time for persistence
+
+Saved time data \mbox{\Hypertarget{group__Global__Variables_ga5b22cc9d737a63bfbe005666ba7b4edc}\label{group__Global__Variables_ga5b22cc9d737a63bfbe005666ba7b4edc}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!last\_known\_time@{last\_known\_time}}
+\index{last\_known\_time@{last\_known\_time}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{last\_known\_time}{last\_known\_time}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structsaved__time__t}{saved\+\_\+time\+\_\+t}} last\+\_\+known\+\_\+time}
+
+Saved time data \mbox{\Hypertarget{group__Global__Variables_gac25cc836ee7b0063b02a1da3f74bf537}\label{group__Global__Variables_gac25cc836ee7b0063b02a1da3f74bf537}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!motor\_state@{motor\_state}}
+\index{motor\_state@{motor\_state}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{motor\_state}{motor\_state}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool motor\+\_\+state\hspace{0.3cm}{\ttfamily [extern]}}
+
+Current motor state (true=ON, false=OFF)
+
+Current motor state \mbox{\Hypertarget{group__Global__Variables_gac25cc836ee7b0063b02a1da3f74bf537}\label{group__Global__Variables_gac25cc836ee7b0063b02a1da3f74bf537}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!motor\_state@{motor\_state}}
+\index{motor\_state@{motor\_state}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{motor\_state}{motor\_state}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool motor\+\_\+state = false}
+
+
+
+Current motor state variable. 
+
+Current motor state \mbox{\Hypertarget{group__Global__Variables_ga8ba03532cceb98f2700598e4b8ebab48}\label{group__Global__Variables_ga8ba03532cceb98f2700598e4b8ebab48}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!schedule\_count@{schedule\_count}}
+\index{schedule\_count@{schedule\_count}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{schedule\_count}{schedule\_count}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int32\+\_\+t schedule\+\_\+count\hspace{0.3cm}{\ttfamily [extern]}}
+
+Number of configured schedules
+
+Number of active schedules \mbox{\Hypertarget{group__Global__Variables_ga8ba03532cceb98f2700598e4b8ebab48}\label{group__Global__Variables_ga8ba03532cceb98f2700598e4b8ebab48}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!schedule\_count@{schedule\_count}}
+\index{schedule\_count@{schedule\_count}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{schedule\_count}{schedule\_count}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int32\+\_\+t schedule\+\_\+count = 0}
+
+Number of active schedules \mbox{\Hypertarget{group__Global__Variables_ga22ee64e19704e2ee3653245d85743d65}\label{group__Global__Variables_ga22ee64e19704e2ee3653245d85743d65}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!schedule\_history@{schedule\_history}}
+\index{schedule\_history@{schedule\_history}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{schedule\_history}{schedule\_history}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structschedule__history__t}{schedule\+\_\+history\+\_\+t}} schedule\+\_\+history\mbox{[}\mbox{\hyperlink{group__Configuration_gabf8d8994f09509f9e061f5bf82daf4cd}{MAX\+\_\+\+HISTORY}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+Array of schedule execution history
+
+History array \mbox{\Hypertarget{group__Global__Variables_ga22ee64e19704e2ee3653245d85743d65}\label{group__Global__Variables_ga22ee64e19704e2ee3653245d85743d65}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!schedule\_history@{schedule\_history}}
+\index{schedule\_history@{schedule\_history}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{schedule\_history}{schedule\_history}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structschedule__history__t}{schedule\+\_\+history\+\_\+t}} schedule\+\_\+history\mbox{[}\mbox{\hyperlink{group__Configuration_gabf8d8994f09509f9e061f5bf82daf4cd}{MAX\+\_\+\+HISTORY}}\mbox{]}}
+
+History array \mbox{\Hypertarget{group__Global__Variables_ga5ef1c562fc22c967963564629bf09a94}\label{group__Global__Variables_ga5ef1c562fc22c967963564629bf09a94}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!schedules@{schedules}}
+\index{schedules@{schedules}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{schedules}{schedules}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structschedule__t}{schedule\+\_\+t}} schedules\mbox{[}\mbox{\hyperlink{group__Configuration_gac716cf158367d8f76483f00b0cd049ad}{MAX\+\_\+\+SCHEDULES}}\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+Array of configured schedules
+
+Schedule array \mbox{\Hypertarget{group__Global__Variables_ga5ef1c562fc22c967963564629bf09a94}\label{group__Global__Variables_ga5ef1c562fc22c967963564629bf09a94}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!schedules@{schedules}}
+\index{schedules@{schedules}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{schedules}{schedules}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structschedule__t}{schedule\+\_\+t}} schedules\mbox{[}\mbox{\hyperlink{group__Configuration_gac716cf158367d8f76483f00b0cd049ad}{MAX\+\_\+\+SCHEDULES}}\mbox{]}}
+
+Schedule array \mbox{\Hypertarget{group__Global__Variables_ga021c2db71a5647e2e98217b3f9b5401e}\label{group__Global__Variables_ga021c2db71a5647e2e98217b3f9b5401e}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!server@{server}}
+\index{server@{server}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{server}{server}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily httpd\+\_\+handle\+\_\+t server\hspace{0.3cm}{\ttfamily [extern]}}
+
+HTTP server handle \mbox{\Hypertarget{group__Global__Variables_ga021c2db71a5647e2e98217b3f9b5401e}\label{group__Global__Variables_ga021c2db71a5647e2e98217b3f9b5401e}} 
+\index{Global Variable Declarations@{Global Variable Declarations}!server@{server}}
+\index{server@{server}!Global Variable Declarations@{Global Variable Declarations}}
+\doxysubsubsection{\texorpdfstring{server}{server}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily httpd\+\_\+handle\+\_\+t server = NULL}
+
+HTTP server handle 

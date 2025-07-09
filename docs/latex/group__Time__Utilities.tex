@@ -1,0 +1,58 @@
+\hypertarget{group__Time__Utilities}{}\doxysection{Time Utility Functions}
+\label{group__Time__Utilities}\index{Time Utility Functions@{Time Utility Functions}}
+
+
+Helper functions for time formatting and display.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__Time__Utilities_ga4d3bcdd63d9c7db406f12f6dea71e329}{get\+\_\+current\+\_\+time\+\_\+str}} (char $\ast$buffer, size\+\_\+t buffer\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Format current system time for display. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Helper functions for time formatting and display. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__Time__Utilities_ga4d3bcdd63d9c7db406f12f6dea71e329}\label{group__Time__Utilities_ga4d3bcdd63d9c7db406f12f6dea71e329}} 
+\index{Time Utility Functions@{Time Utility Functions}!get\_current\_time\_str@{get\_current\_time\_str}}
+\index{get\_current\_time\_str@{get\_current\_time\_str}!Time Utility Functions@{Time Utility Functions}}
+\doxysubsubsection{\texorpdfstring{get\_current\_time\_str()}{get\_current\_time\_str()}}
+{\footnotesize\ttfamily void get\+\_\+current\+\_\+time\+\_\+str (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{size\+\_\+t}]{buffer\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Format current system time for display. 
+
+Get current time as formatted string.
+
+Retrieves the current system time and formats it into a human-\/readable string suitable for display in the web interface and system logs. Uses strftime() to create a standardized format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Output buffer to store the formatted time string \\
+\hline
+{\em buffer\+\_\+size} & Size of the output buffer in bytes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Format\+: \char`\"{}\+YYYY-\/\+MM-\/\+DD HH\+:\+MM\+:\+SS Day\char`\"{} Example\+: \char`\"{}2025-\/07-\/08 14\+:30\+:25 Monday\char`\"{} 
+
+If system time is not set, may show epoch time (1970-\/01-\/01)
+\end{DoxyNote}
+Formats the current system time into a human-\/readable string suitable for display in the web interface and logs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Output buffer to store the formatted time string \\
+\hline
+{\em buffer\+\_\+size} & Size of the output buffer in bytes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Format\+: \char`\"{}\+YYYY-\/\+MM-\/\+DD HH\+:\+MM\+:\+SS Day\char`\"{} Example\+: \char`\"{}2025-\/07-\/08 14\+:30\+:25 Monday\char`\"{} 
+\end{DoxyNote}

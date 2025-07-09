@@ -1,0 +1,154 @@
+\hypertarget{group__Storage__Management}{}\doxysection{Storage Management Functions}
+\label{group__Storage__Management}\index{Storage Management Functions@{Storage Management Functions}}
+
+
+Functions for persistent storage of settings, schedules, and history.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__Storage__Management_ga973715a384f1e51b7b8993bdbed15a3b}{init\+\_\+nvs}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize the Non-\/\+Volatile Storage (NVS) system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_ga8e470dddd9c49dad31fe155e6eff9fbc}{load\+\_\+settings}} (void)
+\begin{DoxyCompactList}\small\item\em Load device settings and schedules from NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_ga2ea83bdac732caa4f9cb7806d0d34d79}{save\+\_\+settings}} (void)
+\begin{DoxyCompactList}\small\item\em Save current device settings and schedules to NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_gafd45f9e5ac12f008aa62728519ed4bd6}{save\+\_\+history\+\_\+to\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Save schedule execution history to NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_gaad68423f26904e60af5372e60d0df6f5}{load\+\_\+history\+\_\+from\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Load schedule execution history from NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_gadfa5a5d4d22b0fd6e9eddfeb4ff74d9f}{save\+\_\+time\+\_\+to\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Save current system time to NVS. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__Storage__Management_ga6d1ab41537e4ba04a6338bdd3374618f}{restore\+\_\+time\+\_\+from\+\_\+flash}} (void)
+\begin{DoxyCompactList}\small\item\em Restore system time from NVS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions for persistent storage of settings, schedules, and history. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__Storage__Management_ga973715a384f1e51b7b8993bdbed15a3b}\label{group__Storage__Management_ga973715a384f1e51b7b8993bdbed15a3b}} 
+\index{Storage Management Functions@{Storage Management Functions}!init\_nvs@{init\_nvs}}
+\index{init\_nvs@{init\_nvs}!Storage Management Functions@{Storage Management Functions}}
+\doxysubsubsection{\texorpdfstring{init\_nvs()}{init\_nvs()}}
+{\footnotesize\ttfamily void init\+\_\+nvs (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize the Non-\/\+Volatile Storage (NVS) system. 
+
+Sets up the NVS partition and opens a handle for storing motor controller data. Handles partition initialization and error recovery.
+
+\begin{DoxyNote}{Note}
+Must be called before any other storage functions
+\end{DoxyNote}
+Initialize the Non-\/\+Volatile Storage (NVS) system.
+
+Initializes the ESP32 NVS flash storage and opens a handle for the motor scheduler namespace. If NVS is corrupted or incompatible, it will be erased and reinitialized. This function must be called before any other storage operations.
+
+\begin{DoxyNote}{Note}
+This function will cause a system restart if NVS initialization fails 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Storage__Management_ga8e470dddd9c49dad31fe155e6eff9fbc}{load\+\_\+settings()}}, \mbox{\hyperlink{group__Storage__Management_ga2ea83bdac732caa4f9cb7806d0d34d79}{save\+\_\+settings()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__Storage__Management_gaad68423f26904e60af5372e60d0df6f5}\label{group__Storage__Management_gaad68423f26904e60af5372e60d0df6f5}} 
+\index{Storage Management Functions@{Storage Management Functions}!load\_history\_from\_flash@{load\_history\_from\_flash}}
+\index{load\_history\_from\_flash@{load\_history\_from\_flash}!Storage Management Functions@{Storage Management Functions}}
+\doxysubsubsection{\texorpdfstring{load\_history\_from\_flash()}{load\_history\_from\_flash()}}
+{\footnotesize\ttfamily void load\+\_\+history\+\_\+from\+\_\+flash (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Load schedule execution history from NVS. 
+
+Restores previously saved schedule execution history, maintaining continuity across system reboots. \mbox{\Hypertarget{group__Storage__Management_ga8e470dddd9c49dad31fe155e6eff9fbc}\label{group__Storage__Management_ga8e470dddd9c49dad31fe155e6eff9fbc}} 
+\index{Storage Management Functions@{Storage Management Functions}!load\_settings@{load\_settings}}
+\index{load\_settings@{load\_settings}!Storage Management Functions@{Storage Management Functions}}
+\doxysubsubsection{\texorpdfstring{load\_settings()}{load\_settings()}}
+{\footnotesize\ttfamily void load\+\_\+settings (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Load device settings and schedules from NVS. 
+
+Restores device configuration including\+:
+\begin{DoxyItemize}
+\item Device name and location
+\item Schedule count and all schedule data
+\item System preferences
+\end{DoxyItemize}
+
+Sets default values if no stored data is found.
+
+Retrieves all stored device settings including device name, location, and all scheduled motor operations from NVS flash storage. If data is corrupted or missing, appropriate defaults are used. Schedule count is validated to prevent buffer overflows.
+
+\begin{DoxyNote}{Note}
+Should be called during system initialization after \mbox{\hyperlink{group__Storage_ga973715a384f1e51b7b8993bdbed15a3b}{init\+\_\+nvs()}} 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Storage_ga2ea83bdac732caa4f9cb7806d0d34d79}{save\+\_\+settings()}}, \mbox{\hyperlink{group__Storage_ga973715a384f1e51b7b8993bdbed15a3b}{init\+\_\+nvs()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__Storage__Management_ga6d1ab41537e4ba04a6338bdd3374618f}\label{group__Storage__Management_ga6d1ab41537e4ba04a6338bdd3374618f}} 
+\index{Storage Management Functions@{Storage Management Functions}!restore\_time\_from\_flash@{restore\_time\_from\_flash}}
+\index{restore\_time\_from\_flash@{restore\_time\_from\_flash}!Storage Management Functions@{Storage Management Functions}}
+\doxysubsubsection{\texorpdfstring{restore\_time\_from\_flash()}{restore\_time\_from\_flash()}}
+{\footnotesize\ttfamily void restore\+\_\+time\+\_\+from\+\_\+flash (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Restore system time from NVS. 
+
+Attempts to restore previously saved time if network synchronization is not available. Used as fallback time source. \mbox{\Hypertarget{group__Storage__Management_gafd45f9e5ac12f008aa62728519ed4bd6}\label{group__Storage__Management_gafd45f9e5ac12f008aa62728519ed4bd6}} 
+\index{Storage Management Functions@{Storage Management Functions}!save\_history\_to\_flash@{save\_history\_to\_flash}}
+\index{save\_history\_to\_flash@{save\_history\_to\_flash}!Storage Management Functions@{Storage Management Functions}}
+\doxysubsubsection{\texorpdfstring{save\_history\_to\_flash()}{save\_history\_to\_flash()}}
+{\footnotesize\ttfamily void save\+\_\+history\+\_\+to\+\_\+flash (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Save schedule execution history to NVS. 
+
+Persists the current schedule execution history array, allowing history to survive system reboots. \mbox{\Hypertarget{group__Storage__Management_ga2ea83bdac732caa4f9cb7806d0d34d79}\label{group__Storage__Management_ga2ea83bdac732caa4f9cb7806d0d34d79}} 
+\index{Storage Management Functions@{Storage Management Functions}!save\_settings@{save\_settings}}
+\index{save\_settings@{save\_settings}!Storage Management Functions@{Storage Management Functions}}
+\doxysubsubsection{\texorpdfstring{save\_settings()}{save\_settings()}}
+{\footnotesize\ttfamily void save\+\_\+settings (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Save current device settings and schedules to NVS. 
+
+Persists all current configuration data\+:
+\begin{DoxyItemize}
+\item Device name and location
+\item All configured schedules
+\item Schedule count
+\end{DoxyItemize}
+
+Automatically commits changes to flash storage.
+
+Save current device settings and schedules to NVS.
+
+Stores all current device settings including device name, location, and all motor schedules to NVS flash storage. Data is committed to ensure immediate persistence. Individual schedule save failures are logged but don\textquotesingle{}t prevent other schedules from being saved.
+
+\begin{DoxyNote}{Note}
+This function should be called whenever settings are modified 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__Storage__Management_ga8e470dddd9c49dad31fe155e6eff9fbc}{load\+\_\+settings()}}, \mbox{\hyperlink{group__Storage__Management_gafd45f9e5ac12f008aa62728519ed4bd6}{save\+\_\+history\+\_\+to\+\_\+flash()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__Storage__Management_gadfa5a5d4d22b0fd6e9eddfeb4ff74d9f}\label{group__Storage__Management_gadfa5a5d4d22b0fd6e9eddfeb4ff74d9f}} 
+\index{Storage Management Functions@{Storage Management Functions}!save\_time\_to\_flash@{save\_time\_to\_flash}}
+\index{save\_time\_to\_flash@{save\_time\_to\_flash}!Storage Management Functions@{Storage Management Functions}}
+\doxysubsubsection{\texorpdfstring{save\_time\_to\_flash()}{save\_time\_to\_flash()}}
+{\footnotesize\ttfamily void save\+\_\+time\+\_\+to\+\_\+flash (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Save current system time to NVS. 
+
+Stores the current time for restoration after reboot when network time synchronization may not be immediately available. 

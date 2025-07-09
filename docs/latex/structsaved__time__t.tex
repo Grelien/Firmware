@@ -1,0 +1,83 @@
+\hypertarget{structsaved__time__t}{}\doxysection{saved\+\_\+time\+\_\+t Struct Reference}
+\label{structsaved__time__t}\index{saved\_time\_t@{saved\_time\_t}}
+
+
+Saved time structure for persistent storage.  
+
+
+
+
+{\ttfamily \#include $<$types.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structsaved__time__t_ad6c8638fe1142a742e93abac41a485c3}{year}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structsaved__time__t_a6d7eb0adb1de70d1dd2d1bc05640009f}{month}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structsaved__time__t_a4a785bc529213b245337b20ac9825bed}{day}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structsaved__time__t_ae22a98cbe8ef22445bb8ad9d3a562a1c}{hour}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structsaved__time__t_a26cb53a40e6aa9a0fe1659390d89564a}{minute}}
+\item 
+int32\+\_\+t \mbox{\hyperlink{structsaved__time__t_ad7b70a8520e7c6830e8b798619991e2b}{second}}
+\item 
+bool \mbox{\hyperlink{structsaved__time__t_a70c9e16c7cfe7fa9ea6d1748145aa701}{is\+\_\+valid}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Saved time structure for persistent storage. 
+
+Used to store and restore system time across reboots when network time synchronization is not available. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structsaved__time__t_a4a785bc529213b245337b20ac9825bed}\label{structsaved__time__t_a4a785bc529213b245337b20ac9825bed}} 
+\index{saved\_time\_t@{saved\_time\_t}!day@{day}}
+\index{day@{day}!saved\_time\_t@{saved\_time\_t}}
+\doxysubsubsection{\texorpdfstring{day}{day}}
+{\footnotesize\ttfamily int32\+\_\+t saved\+\_\+time\+\_\+t\+::day}
+
+Day of month (1-\/31) \mbox{\Hypertarget{structsaved__time__t_ae22a98cbe8ef22445bb8ad9d3a562a1c}\label{structsaved__time__t_ae22a98cbe8ef22445bb8ad9d3a562a1c}} 
+\index{saved\_time\_t@{saved\_time\_t}!hour@{hour}}
+\index{hour@{hour}!saved\_time\_t@{saved\_time\_t}}
+\doxysubsubsection{\texorpdfstring{hour}{hour}}
+{\footnotesize\ttfamily int32\+\_\+t saved\+\_\+time\+\_\+t\+::hour}
+
+Hour (0-\/23) \mbox{\Hypertarget{structsaved__time__t_a70c9e16c7cfe7fa9ea6d1748145aa701}\label{structsaved__time__t_a70c9e16c7cfe7fa9ea6d1748145aa701}} 
+\index{saved\_time\_t@{saved\_time\_t}!is\_valid@{is\_valid}}
+\index{is\_valid@{is\_valid}!saved\_time\_t@{saved\_time\_t}}
+\doxysubsubsection{\texorpdfstring{is\_valid}{is\_valid}}
+{\footnotesize\ttfamily bool saved\+\_\+time\+\_\+t\+::is\+\_\+valid}
+
+Whether the stored time is valid \mbox{\Hypertarget{structsaved__time__t_a26cb53a40e6aa9a0fe1659390d89564a}\label{structsaved__time__t_a26cb53a40e6aa9a0fe1659390d89564a}} 
+\index{saved\_time\_t@{saved\_time\_t}!minute@{minute}}
+\index{minute@{minute}!saved\_time\_t@{saved\_time\_t}}
+\doxysubsubsection{\texorpdfstring{minute}{minute}}
+{\footnotesize\ttfamily int32\+\_\+t saved\+\_\+time\+\_\+t\+::minute}
+
+Minute (0-\/59) \mbox{\Hypertarget{structsaved__time__t_a6d7eb0adb1de70d1dd2d1bc05640009f}\label{structsaved__time__t_a6d7eb0adb1de70d1dd2d1bc05640009f}} 
+\index{saved\_time\_t@{saved\_time\_t}!month@{month}}
+\index{month@{month}!saved\_time\_t@{saved\_time\_t}}
+\doxysubsubsection{\texorpdfstring{month}{month}}
+{\footnotesize\ttfamily int32\+\_\+t saved\+\_\+time\+\_\+t\+::month}
+
+Month (1-\/12) \mbox{\Hypertarget{structsaved__time__t_ad7b70a8520e7c6830e8b798619991e2b}\label{structsaved__time__t_ad7b70a8520e7c6830e8b798619991e2b}} 
+\index{saved\_time\_t@{saved\_time\_t}!second@{second}}
+\index{second@{second}!saved\_time\_t@{saved\_time\_t}}
+\doxysubsubsection{\texorpdfstring{second}{second}}
+{\footnotesize\ttfamily int32\+\_\+t saved\+\_\+time\+\_\+t\+::second}
+
+Second (0-\/59) \mbox{\Hypertarget{structsaved__time__t_ad6c8638fe1142a742e93abac41a485c3}\label{structsaved__time__t_ad6c8638fe1142a742e93abac41a485c3}} 
+\index{saved\_time\_t@{saved\_time\_t}!year@{year}}
+\index{year@{year}!saved\_time\_t@{saved\_time\_t}}
+\doxysubsubsection{\texorpdfstring{year}{year}}
+{\footnotesize\ttfamily int32\+\_\+t saved\+\_\+time\+\_\+t\+::year}
+
+Year (e.\+g., 2025) 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+main/\mbox{\hyperlink{types_8h}{types.\+h}}\end{DoxyCompactItemize}
