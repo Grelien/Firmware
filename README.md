@@ -241,8 +241,3 @@ For technical support:
 
 This project is open source. Modify and distribute as needed for your applications.
 
-## Version History
-
-- v1.2 - Current version with web interface and scheduling
-- v1.1 - Added persistent storage and time sync
-- v1.0 - Basic motor control functionality
