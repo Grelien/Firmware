@@ -97,11 +97,6 @@ A comprehensive motor control system built on ESP32 with WiFi Access Point mode 
 - Active level configuration (LOW = ON)
 - Safety floating when OFF
 
-### Time Settings
-- Timezone: GMT+5:30 (Sri Lanka)
-- SNTP server: pool.ntp.org
-- Automatic time synchronization
-
 ### Storage Settings
 - Maximum schedules: 10
 - History entries: 30
