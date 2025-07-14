@@ -230,8 +230,9 @@ For technical support:
 - Review ESP32 GPIO specifications
 - Verify motor control circuit design
 - Test with minimal hardware setup first
-
 ## License
 
-This project is open source. Modify and distribute as needed for your applications.
+All projects under Grelien are open-source and licensed under the [MIT License](https://opensource.org/licenses/MIT) unless otherwise stated.
+
+> Built with 💚 for the farmers of tomorrow.
 
