@@ -13,7 +13,6 @@ A comprehensive motor control system built on ESP32 with WiFi Access Point mode 
 - **Real-time Status**: Live motor status, system uptime, and schedule monitoring
 - **Persistent Storage**: Settings and schedules saved to flash memory using NVS
 - **History Tracking**: Maintains history of motor operations and schedule executions
-- **Time Synchronization**: SNTP time synchronization with timezone support (GMT+5:30 Sri Lanka)
 - **Device Configuration**: Customizable device name and location settings
 
 ## Hardware Requirements
@@ -97,11 +96,6 @@ A comprehensive motor control system built on ESP32 with WiFi Access Point mode 
 - Pin assignment (default: GPIO 2)
 - Active level configuration (LOW = ON)
 - Safety floating when OFF
-
-### Time Settings
-- Timezone: GMT+5:30 (Sri Lanka)
-- SNTP server: pool.ntp.org
-- Automatic time synchronization
 
 ### Storage Settings
 - Maximum schedules: 10
@@ -236,8 +230,9 @@ For technical support:
 - Review ESP32 GPIO specifications
 - Verify motor control circuit design
 - Test with minimal hardware setup first
-
 ## License
 
-This project is open source. Modify and distribute as needed for your applications.
+All projects under Grelien are open-source and licensed under the [MIT License](https://opensource.org/licenses/MIT) unless otherwise stated.
+
+> Built with 💚 for the farmers of tomorrow.
 
