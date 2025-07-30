@@ -52,7 +52,7 @@ ehthumbs.db  # Windows
 Desktop.ini  # Windows
 
 # Clangd language server cache/config
-/.clangd/
+/.clangd
 
 # ==============================================================================
 # 3. Virtual Environments and Python Specifics
