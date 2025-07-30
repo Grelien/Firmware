@@ -26,6 +26,7 @@
 #include <stdio.h>
 #include "esp_log.h"
 #include "esp_http_server.h"
+#include <inttypes.h>
 
 /** @brief Logging tag for web server operations */
 static const char *TAG = "WEBSERVER";
@@ -982,7 +983,7 @@ esp_err_t add_schedule_handler(httpd_req_t *req) {
 
                 ESP_LOGI(TAG, "Schedule added: %s (%02d:%02d - %02d:%02d)", 
                     name, start_hour, start_minute, end_hour, end_minute);
-                ESP_LOGI(TAG, "New schedule count: %d", schedule_count);
+                ESP_LOGI(TAG, "New schedule count: %" PRId32, schedule_count);
                 
                 valid_data = true;
             } else {

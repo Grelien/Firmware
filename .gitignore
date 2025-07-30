@@ -5,7 +5,6 @@
 /build/
 
 # SDK configuration files generated/modified during build
-/sdkconfig
 /sdkconfig.defaults.old
 /sdkconfig.old
 
@@ -51,6 +50,9 @@ cmake_install.cmake
 Thumbs.db    # Windows
 ehthumbs.db  # Windows
 Desktop.ini  # Windows
+
+# Clangd language server cache/config
+/.clangd/
 
 # ==============================================================================
 # 3. Virtual Environments and Python Specifics
