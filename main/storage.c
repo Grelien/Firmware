@@ -20,6 +20,7 @@
 #include "nvs.h"
 #include "esp_log.h"
 #include "time.h"
+#include <inttypes.h>
 
 static const char *TAG = "STORAGE"; ///< Logging tag for storage module
 
@@ -86,7 +87,7 @@ void load_settings(void) {
         }
     }
     
-    ESP_LOGI(TAG, "Settings loaded. Schedule count: %d", schedule_count);
+    ESP_LOGI(TAG, "Settings loaded. Schedule count: %" PRId32, schedule_count);
 }
 
 /**
